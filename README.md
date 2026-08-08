@@ -96,11 +96,4 @@ npx ng serve
 *   **Port de l'application** : Une fois compilée, l'application est accessible depuis votre navigateur à l'adresse [http://localhost:4200/](http://localhost:4200/).
 *   **Rechargement à chaud (Hot-Reload)** : Toute modification apportée au code source frontend rechargera automatiquement la page dans le navigateur.
 
----
 
-## 🧪 Tests du Projet
-
-Vous pouvez exécuter les tests unitaires du frontend configurés avec Karma & Jasmine à l'aide de la commande :
-```bash
-npm test
-```
