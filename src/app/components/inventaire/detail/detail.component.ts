@@ -1,9 +1,10 @@
 import { Component, OnInit, inject, DestroyRef } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink, Router } from '@angular/router';
 import { NgClass, NgIf, DatePipe, CurrencyPipe } from '@angular/common';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Produit, MouvementStock } from '../../../models/types.models';
-import {InventaireService} from '../../../services/inventaire.service';
+import { InventaireService } from '../../../services/inventaire.service';
+import { NotificationService } from '../../../services/notification.service';
 
 @Component({
   selector: 'app-detail',
@@ -14,7 +15,9 @@ import {InventaireService} from '../../../services/inventaire.service';
 export class DetailComponent implements OnInit {
   private readonly service = inject(InventaireService);
   private readonly route = inject(ActivatedRoute);
+  private readonly router = inject(Router);
   private readonly destroyRef = inject(DestroyRef);
+  private readonly notify = inject(NotificationService);
 
   public produitId!: number;
   public produit?: Produit;
@@ -32,7 +35,11 @@ export class DetailComponent implements OnInit {
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({
         next: (data) => this.produit = data,
-        error: (err) => console.error("Impossible de charger la fiche produit", err)
+        error: (err) => {
+          console.error(err);
+          this.notify.toastError('Fiche produit introuvable ou inexistante.');
+          this.router.navigate(['/inventaire']);
+        }
       });
   }
 
@@ -41,7 +48,10 @@ export class DetailComponent implements OnInit {
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({
         next: (flux) => this.historiqueMouvements = flux.reverse(),
-        error: (err) => console.error("Impossible de charger l'historique logistique", err)
+        error: (err) => {
+          console.error(err);
+          this.notify.toastError("Impossible d'extraire l'historique logistique.");
+        }
       });
   }
 }

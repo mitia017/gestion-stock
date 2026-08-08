@@ -5,7 +5,7 @@
       <h2 class="text-xl font-bold text-gray-800">Ajouter une catégorie</h2>
       <p class="text-xs text-gray-500 mt-0.5">Enregistrer une nouvelle classification d'articles</p>
     </div>
-    <a routerLink="/categories" class="text-sm text-gray-400 hover:text-gray-600 font-medium">
+    <a routerLink="/categorie" class="text-sm text-gray-400 hover:text-gray-600 font-medium">
       &larr; Retour
     </a>
   </div>
@@ -19,6 +19,17 @@
 
       @if (categorieForm.get('nom')?.touched && categorieForm.get('nom')?.invalid) {
       <p class="text-xs text-red-500 mt-1 font-medium">Le nom doit comporter au moins 3 caractères.</p>
+      }
+    </div>
+
+    <div>
+      <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Description *</label>
+      <textarea formControlName="description" placeholder="Description des articles de cette catégorie..." rows="3"
+                class="w-full p-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none bg-white resize-none"
+                [ngClass]="{'border-red-500 ring-1 ring-red-500': categorieForm.get('description')?.touched && categorieForm.get('description')?.invalid}"></textarea>
+
+      @if (categorieForm.get('description')?.touched && categorieForm.get('description')?.invalid) {
+      <p class="text-xs text-red-500 mt-1 font-medium">La description est obligatoire.</p>
       }
     </div>
 

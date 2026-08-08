@@ -5,6 +5,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { CategorieService } from '../../../services/categorie.service';
 import { Categorie } from '../../../models/types.models';
+import { NotificationService } from '../../../services/notification.service';
 
 @Component({
   selector: 'app-liste',
@@ -15,6 +16,7 @@ import { Categorie } from '../../../models/types.models';
 export class ListeComponent implements OnInit {
   private readonly service = inject(CategorieService);
   private readonly destroyRef = inject(DestroyRef);
+  private readonly notify = inject(NotificationService);
 
   private toutesLesCategories: Categorie[] = [];
   public categoriesAffichees: Categorie[] = [];
@@ -28,7 +30,10 @@ export class ListeComponent implements OnInit {
           this.toutesLesCategories = data;
           this.categoriesAffichees = data;
         },
-        error: (err) => console.error(err)
+        error: (err) => {
+          console.error(err);
+          this.notify.toastError('Impossible de charger les catégories.');
+        }
       });
 
     this.rechercheCtrl.valueChanges
@@ -41,13 +46,27 @@ export class ListeComponent implements OnInit {
       });
   }
 
-  onSupprimer(id: number): void {
-    if (!confirm('Supprimer cette catégorie ?')) return;
+  async onSupprimer(id: number): Promise<void> {
+    const estConfirme = await this.notify.confirm(
+      'Supprimer cette catégorie ?',
+      'Cette action supprimera définitivement la catégorie sélectionnée.',
+      'Oui, supprimer'
+    );
+
+    if (!estConfirme) return;
+
     this.service.deleteCategorie(id)
       .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe(() => {
-        this.toutesLesCategories = this.toutesLesCategories.filter(c => c.id !== id);
-        this.categoriesAffichees = this.categoriesAffichees.filter(c => c.id !== id);
+      .subscribe({
+        next: () => {
+          this.toutesLesCategories = this.toutesLesCategories.filter(c => c.id !== id);
+          this.categoriesAffichees = this.categoriesAffichees.filter(c => c.id !== id);
+          this.notify.toastSuccess('La catégorie a été supprimée.');
+        },
+        error: (err) => {
+          console.error(err);
+          this.notify.toastError('Erreur lors de la suppression (liée à des produits existants).');
+        }
       });
   }
 }

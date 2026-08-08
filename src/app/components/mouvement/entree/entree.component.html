@@ -4,25 +4,40 @@
     <p class="text-xs text-emerald-600 mt-0.5">Augmenter le stock d'un produit (Réception fournisseur, retour...)</p>
   </div>
 
-  <form [formGroup]="entreeForm" (ngSubmit bag)="onSubmit()" class="p-6 space-y-4">
+  <form [formGroup]="entreeForm" (ngSubmit)="onSubmit()" class="p-6 space-y-4">
     <div>
       <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Sélectionner l'article *</label>
-      <select formControlName="produitId" class="w-full p-2.5 border rounded-lg text-sm bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+      <select formControlName="produitId"
+              class="w-full p-2.5 border rounded-lg text-sm bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none"
+              [ngClass]="{'border-red-500 ring-1 ring-red-500': entreeForm.get('produitId')?.touched && entreeForm.get('produitId')?.invalid}">
         <option value="" disabled>Choisir un produit...</option>
         @for (p of produits; track p.id) {
         <option [value]="p.id">{{ p.nom }} (Stock actuel: {{ p.quantiteStock }})</option>
         }
       </select>
+      @if (entreeForm.get('produitId')?.touched && entreeForm.get('produitId')?.invalid) {
+      <p class="text-xs text-red-500 mt-1 font-medium">Veuillez sélectionner un article.</p>
+      }
     </div>
 
     <div>
       <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Quantité reçue *</label>
-      <input type="number" formControlName="quantite" class="w-full p-2.5 border rounded-lg text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+      <input type="number" formControlName="quantite"
+             class="w-full p-2.5 border rounded-lg text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none"
+             [ngClass]="{'border-red-500 ring-1 ring-red-500': entreeForm.get('quantite')?.touched && entreeForm.get('quantite')?.invalid}">
+      @if (entreeForm.get('quantite')?.touched && entreeForm.get('quantite')?.invalid) {
+      <p class="text-xs text-red-500 mt-1 font-medium">La quantité minimale requise est de 1.</p>
+      }
     </div>
 
     <div>
       <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Motif / Justification de l'entrée *</label>
-      <input type="text" formControlName="description" placeholder="Ex: Livraison Facture N°FR-442" class="w-full p-2.5 border rounded-lg text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+      <input type="text" formControlName="description" placeholder="Ex: Livraison Facture N°FR-442"
+             class="w-full p-2.5 border rounded-lg text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none"
+             [ngClass]="{'border-red-500 ring-1 ring-red-500': entreeForm.get('description')?.touched && entreeForm.get('description')?.invalid}">
+      @if (entreeForm.get('description')?.touched && entreeForm.get('description')?.invalid) {
+      <p class="text-xs text-red-500 mt-1 font-medium">La justification doit comporter au moins 3 caractères.</p>
+      }
     </div>
 
     <div class="flex justify-end gap-3 pt-4 border-t border-gray-100">

@@ -1,7 +1,8 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import {CurrencyPipe, NgClass} from '@angular/common';
+import { CurrencyPipe, NgClass } from '@angular/common';
 import { Produit } from '../../../models/types.models';
+import { NotificationService } from '../../../services/notification.service';
 
 @Component({
   selector: 'app-liste',
@@ -14,8 +15,19 @@ export class ListeComponent {
   @Input({ required: true }) produits: Produit[] = [];
   @Output() produitSupprime = new EventEmitter<number>();
 
-  deleteProduct(id: number, event: Event): void {
+  private readonly notify = inject(NotificationService);
+
+  async deleteProduct(id: number, event: Event): Promise<void> {
     event.stopPropagation();
-    this.produitSupprime.emit(id);
+
+    const estConfirme = await this.notify.confirm(
+      'Supprimer ce produit ?',
+      'Cette action retirera définitivement l\'article de l\'inventaire global.',
+      'Oui, supprimer'
+    );
+
+    if (estConfirme) {
+      this.produitSupprime.emit(id);
+    }
   }
 }

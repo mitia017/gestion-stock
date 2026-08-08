@@ -4,8 +4,9 @@ import { Router, RouterLink } from '@angular/router';
 import { NgClass, NgIf } from '@angular/common';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { InventaireService } from '../../../services/inventaire.service';
-import { Produit, MouvementStock } from '../../../models/types.models';
-import {MouvementsService} from '../../../services/mouvements.service';
+import { MouvementsService } from '../../../services/mouvements.service';
+import { NotificationService } from '../../../services/notification.service';
+import { Produit } from '../../../models/types.models';
 
 @Component({
   selector: 'app-formulaire-entree',
@@ -18,6 +19,7 @@ export class EntreeComponent implements OnInit {
   private readonly service = inject(MouvementsService);
   private readonly inventaireService = inject(InventaireService);
   private readonly destroyRef = inject(DestroyRef);
+  private readonly notify = inject(NotificationService);
 
   public produits: Produit[] = [];
 
@@ -30,28 +32,44 @@ export class EntreeComponent implements OnInit {
   ngOnInit(): void {
     this.inventaireService.getProducts()
       .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe(data => this.produits = data);
+      .subscribe({
+        next: (data) => this.produits = data,
+        error: (err) => {
+          console.error(err);
+          this.notify.toastError('Impossible de récupérer la liste des produits.');
+        }
+      });
   }
 
   onSubmit(): void {
     if (this.entreeForm.invalid) {
       this.entreeForm.markAllAsTouched();
+      this.notify.toastWarning('Veuillez remplir correctement tous les champs obligatoires.');
       return;
     }
 
     const formValue = this.entreeForm.value;
-    const nouveauMouvement: Partial<MouvementStock> = {
+
+    const nouveauMouvement = {
       type: 'ENTREE',
-      quantite: formValue.quantite!,
+      quantite: Number(formValue.quantite!),
       motif: formValue.description!,
-      produit: { id: Number(formValue.produitId) } as Produit // Mapping pour Hibernate
+      produit: { id: Number(formValue.produitId) }
     };
 
     this.service.createMouvement(nouveauMouvement)
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({
-        next: () => this.router.navigate(['/mouvements']),
-        error: (err) => console.error("Échec de la validation de l'entrée", err)
+        next: () => {
+          this.notify.toastSuccess('Mouvement d\'entrée enregistré avec succès.');
+          this.router.navigate(['/mouvements']);
+        },
+        error: (err) => {
+          console.error(err);
+          const messageServeur = err.error?.message || "Erreur de validation des données.";
+          this.notify.toastError(`Erreur 400 : ${messageServeur}`);
+        }
       });
   }
+
 }

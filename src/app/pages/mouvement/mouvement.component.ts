@@ -5,8 +5,9 @@ import { RouterLink } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { MouvementStock } from '../../models/types.models';
-import {MouvementsService} from '../../services/mouvements.service';
-import {DashboardService} from '../../services/dashboard.service';
+import { MouvementsService } from '../../services/mouvements.service';
+import { DashboardService } from '../../services/dashboard.service';
+import { NotificationService } from '../../services/notification.service';
 
 @Component({
   selector: 'app-mouvements',
@@ -18,6 +19,7 @@ export class MouvementComponent implements OnInit {
   private readonly service = inject(MouvementsService);
   private readonly statistiqueService = inject(DashboardService);
   private readonly destroyRef = inject(DestroyRef);
+  private readonly notify = inject(NotificationService);
 
   private tousLesMouvements: MouvementStock[] = [];
   public mouvementsAffiches: MouvementStock[] = [];
@@ -43,7 +45,10 @@ export class MouvementComponent implements OnInit {
           this.mouvementsAffiches = data;
           this.statistiqueService.emettreNouvelleListe(this.mouvementsAffiches);
         },
-        error: (err) => console.error('Erreur chargement flux stock', err)
+        error: (err) => {
+          console.error('Erreur chargement flux stock', err);
+          this.notify.toastError('Impossible de charger le flux des mouvements.');
+        }
       });
   }
 
@@ -72,23 +77,29 @@ export class MouvementComponent implements OnInit {
     });
   }
 
-  onSupprimerMouvement(id: number): void {
-    if (!confirm('Voulez-vous vraiment supprimer ce mouvement de stock ?')) return;
+  async onSupprimerMouvement(id: number): Promise<void> {
+    const estConfirme = await this.notify.confirm(
+      'Supprimer ce mouvement ?',
+      'Cette action annulera l\'impact de ce mouvement sur l\'historique.',
+      'Oui, supprimer'
+    );
+
+    if (!estConfirme) return;
 
     this.service.deleteMouvement(id)
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({
         next: () => {
+          this.tousLesMouvements = this.tousLesMouvements.filter(m => m.id !== id);
           this.mouvementsAffiches = this.mouvementsAffiches.filter(m => m.id !== id);
+
           this.statistiqueService.notifierSuppression(id);
-          console.log(`Mouvement de stock #${id} supprimé.`);
+          this.notify.toastSuccess(`Mouvement de stock #${id} supprimé.`);
         },
         error: (err) => {
           console.error("Échec de la suppression du mouvement :", err);
-          alert("Impossible de supprimer ce mouvement. Il est peut-être lié à d'autres contraintes sur le serveur.");
+          this.notify.toastError("Impossible de supprimer ce mouvement (contrainte serveur).");
         }
       });
   }
-
-
 }

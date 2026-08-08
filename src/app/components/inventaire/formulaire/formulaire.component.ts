@@ -5,6 +5,8 @@ import { NgClass, NgIf } from '@angular/common';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { InventaireService } from '../../../services/inventaire.service';
 import { Produit, Categorie } from '../../../models/types.models';
+import {CategorieService} from '../../../services/categorie.service';
+import {NotificationService} from '../../../services/notification.service';
 
 @Component({
   selector: 'app-formulaire',
@@ -14,8 +16,10 @@ import { Produit, Categorie } from '../../../models/types.models';
 })
 export class FormulaireComponent implements OnInit {
   private readonly service = inject(InventaireService);
+  private readonly categorieService = inject(CategorieService);
   private readonly router = inject(Router);
   private readonly destroyRef = inject(DestroyRef);
+  private readonly notify = inject(NotificationService);
 
   public categories: Categorie[] = [];
 
@@ -30,22 +34,23 @@ export class FormulaireComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    this.service.getProducts()
+    this.categorieService.getCategories()
       .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe(data => {
-        const mapUnique = new Map<number, Categorie>();
-        data.forEach(p => {
-          if (p.categorie && p.categorie.id) {
-            mapUnique.set(p.categorie.id, p.categorie);
-          }
-        });
-        this.categories = Array.from(mapUnique.values());
+      .subscribe({
+        next: (data) => {
+          this.categories = data;
+        },
+        error: (err) => {
+          console.error(err);
+          this.notify.toastError('Impossible de charger les catégories.');
+        }
       });
   }
 
   onSubmit(): void {
     if (this.produitForm.invalid) {
       this.produitForm.markAllAsTouched();
+      this.notify.toastWarning('Veuillez remplir correctement tous les champs requis.');
       return;
     }
 
@@ -73,11 +78,11 @@ export class FormulaireComponent implements OnInit {
       .subscribe({
         next: () => {
           this.router.navigate(['/inventaire']);
-          alert('Produit créé avec succès')
+          this.notify.toastSuccess('Produit créé avec succès.');
         },
         error: (err) => {
           console.error("Détail de l'erreur serveur :", err);
-          alert("Erreur lors de la création : vérifiez les données ou les contraintes de votre API.");
+          this.notify.toastError("Erreur lors de la création : contraintes de l'API.");
         }
       });
   }

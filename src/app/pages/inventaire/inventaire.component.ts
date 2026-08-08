@@ -1,11 +1,12 @@
 import { Component, OnInit, inject, DestroyRef } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { InventaireService } from '../../services/inventaire.service';
+import { NotificationService } from '../../services/notification.service';
 import { Produit } from '../../models/types.models';
-import {ListeComponent} from '../../components/inventaire/liste/liste.component';
-import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
-import {debounceTime, distinctUntilChanged} from 'rxjs';
-import {RouterLink} from '@angular/router';
+import { ListeComponent } from '../../components/inventaire/liste/liste.component';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { debounceTime, distinctUntilChanged } from 'rxjs';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-inventaire',
@@ -16,6 +17,7 @@ import {RouterLink} from '@angular/router';
 export class InventaireComponent implements OnInit {
   private readonly service = inject(InventaireService);
   private readonly destroyRef = inject(DestroyRef);
+  private readonly notify = inject(NotificationService);
 
   private tousLesProduits: Produit[] = [];
   public produitsAffiches: Produit[] = [];
@@ -41,7 +43,10 @@ export class InventaireComponent implements OnInit {
           this.produitsAffiches = data;
           this.categories = ['Tous', ...new Set(data.map(p => p.categorie.nom))];
         },
-        error: (err) => console.error(err)
+        error: (err) => {
+          console.error(err);
+          this.notify.toastError('Impossible de charger les produits.');
+        }
       });
   }
 
@@ -77,12 +82,22 @@ export class InventaireComponent implements OnInit {
   }
 
   onSupprimerProduit(id: number): void {
-    if (!confirm('Supprimer ce produit ?')) return;
-    this.service.deleteProduct(id).subscribe({
-      next: () => {
-        this.tousLesProduits = this.tousLesProduits.filter(p => p.id !== id);
-        this.appliquerFiltres();
-      }
-    });
+    this.service.deleteProduct(id)
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe({
+        next: () => {
+          this.tousLesProduits = this.tousLesProduits.filter(p => p.id !== id);
+          this.appliquerFiltres();
+          this.notify.toastSuccess('Le produit a été supprimé avec succès.');
+        },
+        error: (err) => {
+          console.error(err);
+          if (err.status === 500 || err.status === 400) {
+            this.notify.toastError('Impossible de supprimer : ce produit possède un historique de mouvements de stock.');
+          } else {
+            this.notify.toastError('Erreur lors de la suppression du produit.');
+          }
+        }
+      });
   }
 }

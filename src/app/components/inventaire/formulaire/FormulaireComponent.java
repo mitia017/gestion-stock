@@ -1,6 +1,6 @@
 import { Component, OnInit, inject, DestroyRef } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { NgClass, NgIf } from '@angular/common';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { InventaireService } from '../../../services/inventaire.service';
@@ -9,23 +9,21 @@ import { NotificationService } from '../../../services/notification.service';
 import { Produit, Categorie } from '../../../models/types.models';
 
 @Component({
-  selector: 'app-edit',
+  selector: 'app-formulaire',
   standalone: true,
   imports: [ReactiveFormsModule, NgClass, NgIf, RouterLink],
-  templateUrl: './edit.component.html'
+  templateUrl: './formulaire.component.html'
 })
-export class EditComponent implements OnInit {
+export class FormulaireComponent implements OnInit {
   private readonly service = inject(InventaireService);
   private readonly categorieService = inject(CategorieService);
-  private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
   private readonly destroyRef = inject(DestroyRef);
   private readonly notify = inject(NotificationService);
 
   public categories: Categorie[] = [];
-  public produitId!: number;
 
-  public editForm = new FormGroup({
+  public produitForm = new FormGroup({
     nom: new FormControl('', [Validators.required, Validators.minLength(3)]),
     description: new FormControl('', [Validators.required]),
     categorieId: new FormControl('', [Validators.required]),
@@ -36,78 +34,54 @@ export class EditComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    this.produitId = Number(this.route.snapshot.paramMap.get('id'));
-    this.initialiserDonnees();
-  }
-
-  private initialiserDonnees(): void {
     this.categorieService.getCategories()
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({
-        next: (categoriesData) => {
-          this.categories = categoriesData;
-
-          this.service.getProductById(this.produitId)
-            .pipe(takeUntilDestroyed(this.destroyRef))
-            .subscribe({
-              next: (produit: any) => {
-                this.editForm.patchValue({
-                  nom: produit.nom,
-                  description: produit.description,
-                  categorieId: produit.categorie?.id.toString() || '',
-                  quantiteStock: produit.quantiteStock,
-                  prixAchat: produit.prixAchat,
-                  prixVente: produit.prixVente,
-                  seuilAlerte: produit.seuilAlerte
-                });
-              },
-              error: (err: any) => {
-                console.error(err);
-                this.notify.toastError("Impossible de charger les données du produit.");
-                this.router.navigate(['/inventaire']);
-              }
-            });
+        next: (data) => {
+          this.categories = data;
         },
-        error: (err: any) => {
+        error: (err) => {
           console.error(err);
-          this.notify.toastError("Impossible de charger les catégories.");
+          this.notify.toastError('Impossible de charger les catégories.');
         }
       });
   }
 
   onSubmit(): void {
-    if (this.editForm.invalid) {
-      this.editForm.markAllAsTouched();
+    if (this.produitForm.invalid) {
+      this.produitForm.markAllAsTouched();
       this.notify.toastWarning('Veuillez remplir correctement tous les champs requis.');
       return;
     }
 
-    const formValue = this.editForm.value;
-    const idCatSelected = Number(formValue.categorieId);
-    const catCorrespondante = this.categories.find(c => c.id === idCatSelected);
+    const formValue = this.produitForm.value;
+    const idSelectionne = Number(formValue.categorieId);
+    const catCorrespondante = this.categories.find(c => c.id === idSelectionne);
 
-    const produitModifie: Partial<Produit> = {
-      id: this.produitId,
+    const nouveauProduit: Partial<Produit> = {
       nom: formValue.nom!,
       description: formValue.description!,
       prixAchat: formValue.prixAchat!,
       prixVente: formValue.prixVente!,
       quantiteStock: formValue.quantiteStock!,
       seuilAlerte: formValue.seuilAlerte!,
-      categorie: { id: idCatSelected, nom: catCorrespondante ? catCorrespondante.nom : '' },
+      categorie: {
+        id: idSelectionne,
+        nom: catCorrespondante ? catCorrespondante.nom : ''
+      },
       stockFaible: formValue.quantiteStock! <= formValue.seuilAlerte!
     };
 
-    this.service.updateProduct(this.produitId, produitModifie)
+    this.service.createProduct(nouveauProduit)
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({
         next: () => {
-          this.notify.toastSuccess('Le produit a été modifié avec succès.');
+          this.notify.toastSuccess('Produit créé avec succès.');
           this.router.navigate(['/inventaire']);
         },
-        error: (err: any) => {
+        error: (err) => {
           console.error(err);
-          this.notify.toastError('Erreur lors de la mise à jour du produit.');
+          this.notify.toastError("Erreur lors de la création : contraintes de l'API.");
         }
       });
   }

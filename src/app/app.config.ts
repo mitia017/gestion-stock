@@ -1,7 +1,7 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
-
+import { provideSweetAlert2 } from '@sweetalert2/ngx-sweetalert2';
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
 
@@ -10,6 +10,6 @@ import { provideHttpClient } from '@angular/common/http';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes),
-    provideCharts(withDefaultRegisterables()), provideHttpClient()
+    provideCharts(withDefaultRegisterables()), provideHttpClient(), provideSweetAlert2()
   ]
 };

@@ -5,6 +5,7 @@ import { NgClass, NgIf } from '@angular/common';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { InventaireService } from '../../../services/inventaire.service';
 import { MouvementsService } from '../../../services/mouvements.service';
+import { NotificationService } from '../../../services/notification.service';
 import { Produit, MouvementStock } from '../../../models/types.models';
 
 @Component({
@@ -18,6 +19,7 @@ export class SortieComponent implements OnInit {
   private readonly inventaireService = inject(InventaireService);
   private readonly router = inject(Router);
   private readonly destroyRef = inject(DestroyRef);
+  private readonly notify = inject(NotificationService);
 
   public produits: Produit[] = [];
 
@@ -30,38 +32,44 @@ export class SortieComponent implements OnInit {
   ngOnInit(): void {
     this.inventaireService.getProducts()
       .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe(data => this.produits = data);
+      .subscribe({
+        next: (data) => this.produits = data,
+        error: (err) => {
+          console.error(err);
+          this.notify.toastError('Impossible de récupérer la liste des produits.');
+        }
+      });
   }
 
   onSubmit(): void {
     if (this.sortieForm.invalid) {
       this.sortieForm.markAllAsTouched();
+      this.notify.toastWarning('Veuillez remplir correctement tous les champs obligatoires.');
       return;
     }
 
     const formValue = this.sortieForm.value;
-    const prodSelectionne = this.produits.find(p => p.id === Number(formValue.produitId));
 
-    if (prodSelectionne && prodSelectionne.quantiteStock < formValue.quantite!) {
-      alert(`Erreur : Stock insuffisant. Il ne reste que ${prodSelectionne.quantiteStock} unités disponibles.`);
-      return;
-    }
-
-    const nouveauMouvement: Partial<MouvementStock> = {
+    const nouveauMouvement = {
       type: 'SORTIE',
-      quantite: formValue.quantite!,
+      quantite: Number(formValue.quantite!),
       motif: formValue.description!,
-      produit: { id: Number(formValue.produitId) } as Produit
+      produit: { id: Number(formValue.produitId) }
     };
 
     this.service.createMouvement(nouveauMouvement)
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({
-        next: () => this.router.navigate(['/mouvements']),
+        next: () => {
+          this.notify.toastSuccess('Mouvement d\'entrée enregistré avec succès.');
+          this.router.navigate(['/mouvements']);
+        },
         error: (err) => {
           console.error(err);
-          alert("Erreur serveur lors du déstockage.");
+          const messageServeur = err.error?.message || "Erreur de validation des données.";
+          this.notify.toastError(`Erreur 400 : ${messageServeur}`);
         }
       });
   }
+
 }
