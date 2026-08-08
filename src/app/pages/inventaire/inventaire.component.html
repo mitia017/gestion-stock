@@ -1,0 +1,49 @@
+<div class="flex justify-between mb-4">
+  <h1 class="text-3xl font-bold">Inventaire Global - Liste détaillée</h1>
+  <a routerLink="create" class="px-3 py-2 text-white bg-blue-600 font-bold rounded-md text-lg hover:bg-blue-800 hover:text-gray-50"> + Ajouter un Produit</a>
+</div>
+<div class="w-full bg-white p-4 rounded-t-lg shadow-sm border-b border-gray-100 flex flex-wrap gap-4 items-center justify-between" [formGroup]="filterForm">
+
+  <div class="flex items-center gap-2 flex-1 min-w-[300px]">
+    <div class="relative w-full max-w-md">
+      <input
+        type="text"
+        formControlName="recherche"
+        placeholder="Rechercher par nom, description, ID..."
+        class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+      />
+      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-3">
+
+    <div class="flex items-center gap-1.5 text-sm text-gray-500">
+      <span>Filtre :</span>
+      <select formControlName="categorie" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2 text-sm focus:ring-blue-500 focus:border-blue-500">
+        @for (cat of categories; track cat) {
+        <option [value]="cat">{{ cat }}</option>
+        }
+      </select>
+    </div>
+
+    <div class="flex items-center gap-1.5 text-sm text-gray-500">
+      <span>Statut :</span>
+      <select formControlName="statut" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg p-2 text-sm focus:ring-blue-500 focus:border-blue-500">
+        <option value="Tout">Tout</option>
+        <option value="Stock Normal">Stock Normal</option>
+        <option value="Stock Faible">Stock Faible</option>
+      </select>
+    </div>
+
+  </div>
+</div>
+
+<app-liste
+  [produits]="produitsAffiches"
+  (produitSupprime)="onSupprimerProduit($event)">
+</app-liste>
+
+

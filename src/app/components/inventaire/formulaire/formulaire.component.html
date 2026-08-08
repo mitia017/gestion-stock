@@ -1,0 +1,82 @@
+<div class="w-full max-w-2xl mx-auto mt-6 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+
+  <div class="px-6 py-4 bg-gray-50 border-b border-gray-100 flex items-center justify-between">
+    <div>
+      <h2 class="text-xl font-bold text-gray-800">Fiche Produit</h2>
+      <p class="text-xs text-gray-500 mt-0.5">Enregistrer un nouvel article dans l'inventaire global</p>
+    </div>
+    <a routerLink="/inventaire" class="text-sm text-gray-600 hover:text-gray-900 font-medium">
+      &larr; Retour à la liste
+    </a>
+  </div>
+
+  <form [formGroup]="produitForm" (ngSubmit)="onSubmit()" class="p-6 space-y-5">
+
+    <div>
+      <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Désignation de l'article *</label>
+      <input type="text" formControlName="nom" placeholder="Ex: Peinture Mat Bleue 5L"
+             class="w-full p-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+             [ngClass]="{'border-red-500 ring-1 ring-red-500': produitForm.get('nom')?.touched && produitForm.get('nom')?.invalid}">
+    </div>
+
+    <div>
+      <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Description détaillée *</label>
+      <textarea formControlName="description" rows="2" placeholder="Informations complémentaires..."
+                class="w-full p-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                [ngClass]="{'border-red-500': produitForm.get('description')?.touched && produitForm.get('description')?.invalid}"></textarea>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Catégorie *</label>
+        <select formControlName="categorieId" class="w-full p-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none bg-white">
+          <option value="" disabled>Choisir une catégorie...</option>
+          @for (cat of categories; track cat.id) {
+          <option [value]="cat.id">{{ cat.nom }}</option>
+          }
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Seuil d'alerte Stock *</label>
+        <input type="number" formControlName="seuilAlerte"
+               class="w-full p-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div>
+        <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Prix d'Achat (€) *</label>
+        <input type="number" step="0.01" formControlName="prixAchat" placeholder="0.00"
+               class="w-full p-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+               [ngClass]="{'border-red-500': produitForm.get('prixAchat')?.touched && produitForm.get('prixAchat')?.invalid}">
+      </div>
+
+      <div>
+        <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Prix de Vente (€) *</label>
+        <input type="number" step="0.01" formControlName="prixVente" placeholder="0.00"
+               class="w-full p-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+               [ngClass]="{'border-red-500': produitForm.get('prixVente')?.touched && produitForm.get('prixVente')?.invalid}">
+      </div>
+
+      <div>
+        <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Stock Initial *</label>
+        <input type="number" formControlName="quantiteStock"
+               class="w-full p-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+               [ngClass]="{'border-red-500': produitForm.get('quantiteStock')?.touched && produitForm.get('quantiteStock')?.invalid}">
+      </div>
+    </div>
+
+    <div class="flex items-center justify-end gap-3 pt-4 border-t border-gray-100">
+      <a routerLink="/inventaire"
+         class="px-5 py-2 text-sm font-medium text-gray-600 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer">
+        Annuler
+      </a>
+      <button type="submit" [disabled]="produitForm.invalid"
+              class="px-6 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 rounded-lg shadow-sm transition-colors cursor-pointer">
+        Créer l'article
+      </button>
+    </div>
+
+  </form>
+</div>

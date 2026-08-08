@@ -1,0 +1,35 @@
+<div class="w-full max-w-lg mx-auto mt-8 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+  <div class="px-6 py-4 bg-red-50 border-b border-red-100">
+    <h2 class="text-lg font-bold text-red-800">➖ Bon de Sortie / Déstockage</h2>
+    <p class="text-xs text-red-600 mt-0.5">Diminuer le stock d'un produit (Vente client, casse, consommation interne...)</p>
+  </div>
+
+  <form [formGroup]="sortieForm" (ngSubmit)="onSubmit()" class="p-6 space-y-4">
+    <div>
+      <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Sélectionner l'article à déstocker *</label>
+      <select formControlName="produitId" class="w-full p-2.5 border rounded-lg text-sm bg-white focus:ring-2 focus:ring-red-500 focus:outline-none">
+        <option value="" disabled>Choisir un produit...</option>
+        @for (p of produits; track p.id) {
+        <option [value]="p.id">{{ p.nom }} (Dispo: {{ p.quantiteStock }})</option>
+        }
+      </select>
+    </div>
+
+    <div>
+      <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Quantité à extraire *</label>
+      <input type="number" formControlName="quantite" class="w-full p-2.5 border rounded-lg text-sm focus:ring-2 focus:ring-red-500 focus:outline-none">
+    </div>
+
+    <div>
+      <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Raison du déstockage *</label>
+      <input type="text" formControlName="description" placeholder="Ex: Expédition Commande N°9083 ou Casse atelier" class="w-full p-2.5 border rounded-lg text-sm focus:ring-2 focus:ring-red-500 focus:outline-none">
+    </div>
+
+    <div class="flex justify-end gap-3 pt-4 border-t border-gray-100">
+      <a routerLink="/mouvements" class="px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-100 rounded-lg">Annuler</a>
+      <button type="submit" [disabled]="sortieForm.invalid" class="px-5 py-2 text-sm font-medium text-white bg-red-600 hover:bg-red-700 disabled:bg-gray-200 rounded-lg cursor-pointer">
+        Valider la Sortie
+      </button>
+    </div>
+  </form>
+</div>

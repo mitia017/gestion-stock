@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.hover-side{
+  @apply hover:bg-[#3f5188] hover:rounded-sm hover:border hover:border-white
+}
+.active{
+  @apply bg-[#3f5188] rounded-md border border-blue-100
+}
+
+.pointer{
+  cursor: pointer;
+}

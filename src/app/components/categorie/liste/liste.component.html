@@ -1,0 +1,67 @@
+<div class="w-full p-6 bg-gray-50 min-h-screen">
+
+  <div class="flex justify-between items-center mb-6">
+    <div>
+      <h1 class="text-2xl font-bold text-gray-800">Gestion des Catégories</h1>
+      <p class="text-xs text-gray-500 mt-0.5">Organisez vos produits par familles et classifications</p>
+    </div>
+    <a routerLink="create" class="px-4 py-2 text-white bg-blue-600 font-semibold text-sm rounded-lg hover:bg-blue-700 shadow-sm transition-colors cursor-pointer flex items-center gap-1.5">
+      <span class="text-base font-bold">+</span> Nouvelle Catégorie
+    </a>
+  </div>
+
+  <div class="w-full bg-white p-4 rounded-t-xl shadow-sm border border-gray-100">
+    <div class="relative w-full max-w-xs">
+      <input type="text" [formControl]="rechercheCtrl" placeholder="Rechercher par ID ou nom..."
+             class="w-full pl-3 pr-10 py-2 border border-gray-200 rounded-lg text-sm bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" />
+      <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-gray-400">
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full bg-white rounded-b-xl shadow-sm border-x border-b border-gray-100 overflow-x-auto">
+    <table class="w-full text-left border-collapse text-sm table-fixed">
+      <thead class="bg-gray-50 text-gray-500 border-b border-gray-100 font-semibold text-xs uppercase">
+      <tr>
+        <th class="py-3.5 px-6 w-24">ID Catégorie</th>
+        <th class="py-3.5 px-6 w-1/4">Nom</th>
+        <th class="py-3.5 px-6 w-2/5">Description</th>
+        <th class="py-3.5 px-6 text-right w-44">Actions</th>
+      </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-100 text-gray-700 font-medium">
+      @for (cat of categoriesAffichees; track cat.id) {
+      <tr class="hover:bg-gray-50/70 transition-colors">
+        <td class="py-3.5 px-6 font-mono font-bold text-gray-400">#{{ cat.id }}</td>
+        <td class="py-3.5 px-6 text-gray-900 font-semibold text-base truncate" title="{{ cat.nom }}">{{ cat.nom }}</td>
+
+        <td class="py-3.5 px-6 text-gray-500 font-normal truncate" title="{{ cat.description || 'Aucune description' }}">
+          {{ cat.description || 'Aucune description disponible' }}
+        </td>
+
+        <td class="py-3.5 px-6 text-right">
+          <div class="inline-flex items-center justify-end gap-2 w-full">
+            <a [routerLink]="['edit', cat.id]" class="inline-block text-gray-600 hover:bg-gray-100 px-3 py-1.5 text-xs font-semibold rounded-md transition-colors whitespace-nowrap">
+              Modifier
+            </a>
+            <button (click)="onSupprimer(cat.id)" class="inline-block text-red-600 hover:bg-red-50 px-3 py-1.5 text-xs font-semibold rounded-md cursor-pointer transition-colors whitespace-nowrap">
+              Supprimer
+            </button>
+          </div>
+        </td>
+      </tr>
+      } @empty {
+      <tr>
+        <td colspan="4" class="text-center py-12 text-gray-400 bg-white">
+          <div class="flex flex-col items-center justify-center gap-2">
+            <span class="text-xl">📁</span>
+            <p class="text-xs font-medium">Aucune catégorie disponible ou ne correspond à vos filtres.</p>
+          </div>
+        </td>
+      </tr>
+      }
+      </tbody>
+    </table>
+  </div>
+</div>

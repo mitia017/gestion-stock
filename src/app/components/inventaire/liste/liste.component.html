@@ -1,0 +1,44 @@
+<ul class="w-full mt-4 bg-white p-3 rounded-lg shadow-sm">
+  @for (produit of produits; track produit.id) {
+  <li class="w-full mb-2 border-b border-gray-100 last:border-none pb-2 last:pb-0 hover:bg-gray-50/80 rounded-lg transition-colors group">
+    <div class="grid grid-cols-7 gap-2 items-center text-sm text-gray-700">
+
+      <a [routerLink]="['/inventaire', produit.id]" class="contents cursor-pointer">
+        <span class="text-center py-2 font-mono max-w-[50px] text-gray-400 group-hover:text-blue-600 transition-colors">#{{ produit.id }}</span>
+        <span class="text-left font-medium py-2 group-hover:text-blue-600 transition-colors">{{ produit.nom }}</span>
+        <span class="text-left py-2 text-gray-500 truncate" title="{{ produit.description }}">{{ produit.description }}</span>
+        <span class="text-center py-2 px-2 bg-gray-100 rounded text-xs font-semibold text-gray-600 uppercase">{{ produit.categorie.nom }}</span>
+
+        <span class="text-center py-2 px-3 rounded-full text-xs font-medium"
+              [ngClass]="{
+                  'bg-green-100 text-green-700': !produit.stockFaible,
+                  'bg-red-100 text-red-700': produit.stockFaible
+                }">
+            {{ produit.quantiteStock }} unités
+          </span>
+
+        <span class="text-center font-semibold py-2">
+            {{ produit.quantiteStock * produit.prixVente | currency:'EUR':'symbol':'1.2-2' }}
+          </span>
+      </a>
+
+      <!-- ZONE DE BOUTONS D'ACTIONS (Ne déclenche pas le lien de détail grâce au stopPropagation) -->
+      <div class="flex gap-2 items-center justify-end">
+        <a [routerLink]="['/inventaire', 'edit', produit.id]"
+           class="text-gray-600 hover:bg-gray-100 px-3 py-1.5 text-xs font-medium rounded-md transition-colors">
+          Modifier
+        </a>
+        <button (click)="deleteProduct(produit.id, $event)"
+                class="text-red-600 hover:bg-red-50 px-3 py-1.5 text-xs font-medium rounded-md cursor-pointer transition-colors">
+          Supprimer
+        </button>
+      </div>
+
+    </div>
+  </li>
+  } @empty {
+  <li class="text-center py-8 text-gray-400 text-sm">
+    Aucun produit disponible dans l'inventaire.
+  </li>
+  }
+</ul>

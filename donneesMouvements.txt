@@ -1,0 +1,3452 @@
+[
+  {
+    "id": 1,
+    "produit": {
+      "id": 1,
+      "nom": "Eau minerale 1.5L",
+      "description": "Bouteille d'eau",
+      "prixAchat": 300,
+      "prixVente": 500,
+      "quantiteStock": 60,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-06-26T08:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 50,
+    "motif": "Stock initial",
+    "dateMouvement": "2026-06-26T08:30:00"
+  },
+  {
+    "id": 2,
+    "produit": {
+      "id": 1,
+      "nom": "Eau minerale 1.5L",
+      "description": "Bouteille d'eau",
+      "prixAchat": 300,
+      "prixVente": 500,
+      "quantiteStock": 60,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-06-26T08:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 5,
+    "motif": "Vente client",
+    "dateMouvement": "2026-06-26T10:00:00"
+  },
+  {
+    "id": 3,
+    "produit": {
+      "id": 2,
+      "nom": "Soda 33cl",
+      "description": "Boisson gazeuse cola",
+      "prixAchat": 400,
+      "prixVente": 700,
+      "quantiteStock": 35,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-06-27T09:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 40,
+    "motif": "Stock initial",
+    "dateMouvement": "2026-06-27T09:15:00"
+  },
+  {
+    "id": 4,
+    "produit": {
+      "id": 2,
+      "nom": "Soda 33cl",
+      "description": "Boisson gazeuse cola",
+      "prixAchat": 400,
+      "prixVente": 700,
+      "quantiteStock": 35,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-06-27T09:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 10,
+    "motif": "Vente client",
+    "dateMouvement": "2026-06-27T14:20:00"
+  },
+  {
+    "id": 5,
+    "produit": {
+      "id": 3,
+      "nom": "Jus d'orange 1L",
+      "description": "Jus pur jus",
+      "prixAchat": 900,
+      "prixVente": 1300,
+      "quantiteStock": 30,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-06-28T10:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 25,
+    "motif": "Stock initial",
+    "dateMouvement": "2026-06-28T10:15:00"
+  },
+  {
+    "id": 6,
+    "produit": {
+      "id": 3,
+      "nom": "Jus d'orange 1L",
+      "description": "Jus pur jus",
+      "prixAchat": 900,
+      "prixVente": 1300,
+      "quantiteStock": 30,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-06-28T10:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 3,
+    "motif": "Vente client",
+    "dateMouvement": "2026-06-28T16:45:00"
+  },
+  {
+    "id": 7,
+    "produit": {
+      "id": 7,
+      "nom": "Riz 5kg",
+      "description": "Sac de riz local",
+      "prixAchat": 8000,
+      "prixVente": 10000,
+      "quantiteStock": 33,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-06-26T10:30:00",
+      "categorie": {
+        "id": 2,
+        "nom": "Epicerie",
+        "description": "Produits alimentaires secs et pâtes"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 20,
+    "motif": "Stock initial",
+    "dateMouvement": "2026-06-26T11:00:00"
+  },
+  {
+    "id": 8,
+    "produit": {
+      "id": 7,
+      "nom": "Riz 5kg",
+      "description": "Sac de riz local",
+      "prixAchat": 8000,
+      "prixVente": 10000,
+      "quantiteStock": 33,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-06-26T10:30:00",
+      "categorie": {
+        "id": 2,
+        "nom": "Epicerie",
+        "description": "Produits alimentaires secs et pâtes"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 2,
+    "motif": "Vente client",
+    "dateMouvement": "2026-06-26T15:30:00"
+  },
+  {
+    "id": 9,
+    "produit": {
+      "id": 8,
+      "nom": "Pâtes 500g",
+      "description": "Coquillettes",
+      "prixAchat": 450,
+      "prixVente": 700,
+      "quantiteStock": 70,
+      "seuilAlerte": 15,
+      "dateAjout": "2026-06-27T14:00:00",
+      "categorie": {
+        "id": 2,
+        "nom": "Epicerie",
+        "description": "Produits alimentaires secs et pâtes"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 60,
+    "motif": "Stock initial",
+    "dateMouvement": "2026-06-27T14:10:00"
+  },
+  {
+    "id": 10,
+    "produit": {
+      "id": 8,
+      "nom": "Pâtes 500g",
+      "description": "Coquillettes",
+      "prixAchat": 450,
+      "prixVente": 700,
+      "quantiteStock": 70,
+      "seuilAlerte": 15,
+      "dateAjout": "2026-06-27T14:00:00",
+      "categorie": {
+        "id": 2,
+        "nom": "Epicerie",
+        "description": "Produits alimentaires secs et pâtes"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 15,
+    "motif": "Vente client",
+    "dateMouvement": "2026-06-28T09:30:00"
+  },
+  {
+    "id": 11,
+    "produit": {
+      "id": 55,
+      "nom": "Chips nature 150g",
+      "description": "Sachet de chips",
+      "prixAchat": 800,
+      "prixVente": 1200,
+      "quantiteStock": 22,
+      "seuilAlerte": 8,
+      "dateAjout": "2026-06-26T14:00:00",
+      "categorie": {
+        "id": 10,
+        "nom": "Snacks",
+        "description": "Chips, biscuits apéritifs et chocolats"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 30,
+    "motif": "Stock initial",
+    "dateMouvement": "2026-06-26T14:15:00"
+  },
+  {
+    "id": 12,
+    "produit": {
+      "id": 55,
+      "nom": "Chips nature 150g",
+      "description": "Sachet de chips",
+      "prixAchat": 800,
+      "prixVente": 1200,
+      "quantiteStock": 22,
+      "seuilAlerte": 8,
+      "dateAjout": "2026-06-26T14:00:00",
+      "categorie": {
+        "id": 10,
+        "nom": "Snacks",
+        "description": "Chips, biscuits apéritifs et chocolats"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 8,
+    "motif": "Vente client",
+    "dateMouvement": "2026-06-27T11:20:00"
+  },
+  {
+    "id": 13,
+    "produit": {
+      "id": 49,
+      "nom": "Couches taille 3 (x30)",
+      "description": "Paquet de couches",
+      "prixAchat": 5000,
+      "prixVente": 6500,
+      "quantiteStock": 8,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-06-27T08:00:00",
+      "categorie": {
+        "id": 9,
+        "nom": "Bbebe",
+        "description": "Alimentation et soins pour bébés"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 10,
+    "motif": "Stock initial",
+    "dateMouvement": "2026-06-27T08:30:00"
+  },
+  {
+    "id": 14,
+    "produit": {
+      "id": 49,
+      "nom": "Couches taille 3 (x30)",
+      "description": "Paquet de couches",
+      "prixAchat": 5000,
+      "prixVente": 6500,
+      "quantiteStock": 8,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-06-27T08:00:00",
+      "categorie": {
+        "id": 9,
+        "nom": "Bbebe",
+        "description": "Alimentation et soins pour bébés"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 2,
+    "motif": "Vente client",
+    "dateMouvement": "2026-06-28T17:00:00"
+  },
+  {
+    "id": 15,
+    "produit": {
+      "id": 37,
+      "nom": "Thon en boîte 160g",
+      "description": "Emietté de thon",
+      "prixAchat": 1200,
+      "prixVente": 1700,
+      "quantiteStock": 16,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-06-26T11:00:00",
+      "categorie": {
+        "id": 7,
+        "nom": "Conserves",
+        "description": "Plats cuisinés, thon, sardines en boîte"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 20,
+    "motif": "Stock initial",
+    "dateMouvement": "2026-06-26T11:15:00"
+  },
+  {
+    "id": 16,
+    "produit": {
+      "id": 37,
+      "nom": "Thon en boîte 160g",
+      "description": "Emietté de thon",
+      "prixAchat": 1200,
+      "prixVente": 1700,
+      "quantiteStock": 16,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-06-26T11:00:00",
+      "categorie": {
+        "id": 7,
+        "nom": "Conserves",
+        "description": "Plats cuisinés, thon, sardines en boîte"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 4,
+    "motif": "Vente client",
+    "dateMouvement": "2026-06-29T10:40:00"
+  },
+  {
+    "id": 17,
+    "produit": {
+      "id": 4,
+      "nom": "Boisson energetique",
+      "description": "Cannette 250ml",
+      "prixAchat": 600,
+      "prixVente": 1000,
+      "quantiteStock": 15,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-06-29T11:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 15,
+    "motif": "Approvisionnement",
+    "dateMouvement": "2026-06-29T08:00:00"
+  },
+  {
+    "id": 18,
+    "produit": {
+      "id": 4,
+      "nom": "Boisson energetique",
+      "description": "Cannette 250ml",
+      "prixAchat": 600,
+      "prixVente": 1000,
+      "quantiteStock": 15,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-06-29T11:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 5,
+    "motif": "Vente client",
+    "dateMouvement": "2026-06-29T13:00:00"
+  },
+  {
+    "id": 19,
+    "produit": {
+      "id": 5,
+      "nom": "Thé glacé 1.5L",
+      "description": "Goût pêche",
+      "prixAchat": 700,
+      "prixVente": 1100,
+      "quantiteStock": 32,
+      "seuilAlerte": 8,
+      "dateAjout": "2026-06-30T12:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 30,
+    "motif": "Approvisionnement",
+    "dateMouvement": "2026-06-30T09:10:00"
+  },
+  {
+    "id": 20,
+    "produit": {
+      "id": 5,
+      "nom": "Thé glacé 1.5L",
+      "description": "Goût pêche",
+      "prixAchat": 700,
+      "prixVente": 1100,
+      "quantiteStock": 32,
+      "seuilAlerte": 8,
+      "dateAjout": "2026-06-30T12:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 10,
+    "motif": "Vente client",
+    "dateMouvement": "2026-06-30T16:20:00"
+  },
+  {
+    "id": 21,
+    "produit": {
+      "id": 9,
+      "nom": "Huile de tournesol 1L",
+      "description": "Bouteille d'huile",
+      "prixAchat": 1500,
+      "prixVente": 1900,
+      "quantiteStock": 35,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-06-28T15:00:00",
+      "categorie": {
+        "id": 2,
+        "nom": "Epicerie",
+        "description": "Produits alimentaires secs et pâtes"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 25,
+    "motif": "Approvisionnement",
+    "dateMouvement": "2026-06-30T10:00:00"
+  },
+  {
+    "id": 22,
+    "produit": {
+      "id": 9,
+      "nom": "Huile de tournesol 1L",
+      "description": "Bouteille d'huile",
+      "prixAchat": 1500,
+      "prixVente": 1900,
+      "quantiteStock": 35,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-06-28T15:00:00",
+      "categorie": {
+        "id": 2,
+        "nom": "Epicerie",
+        "description": "Produits alimentaires secs et pâtes"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 5,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-01T11:15:00"
+  },
+  {
+    "id": 23,
+    "produit": {
+      "id": 10,
+      "nom": "Sucre en poudre 1kg",
+      "description": "Sucre blanc",
+      "prixAchat": 900,
+      "prixVente": 1200,
+      "quantiteStock": 48,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-06-29T16:00:00",
+      "categorie": {
+        "id": 2,
+        "nom": "Epicerie",
+        "description": "Produits alimentaires secs et pâtes"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 40,
+    "motif": "Approvisionnement",
+    "dateMouvement": "2026-06-30T09:30:00"
+  },
+  {
+    "id": 24,
+    "produit": {
+      "id": 10,
+      "nom": "Sucre en poudre 1kg",
+      "description": "Sucre blanc",
+      "prixAchat": 900,
+      "prixVente": 1200,
+      "quantiteStock": 48,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-06-29T16:00:00",
+      "categorie": {
+        "id": 2,
+        "nom": "Epicerie",
+        "description": "Produits alimentaires secs et pâtes"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 12,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-01T14:00:00"
+  },
+  {
+    "id": 25,
+    "produit": {
+      "id": 6,
+      "nom": "Sirop de menthe",
+      "description": "Bouteille 75cl",
+      "prixAchat": 1200,
+      "prixVente": 1600,
+      "quantiteStock": 22,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-01T08:30:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 20,
+    "motif": "Approvisionnement",
+    "dateMouvement": "2026-07-01T09:00:00"
+  },
+  {
+    "id": 26,
+    "produit": {
+      "id": 6,
+      "nom": "Sirop de menthe",
+      "description": "Bouteille 75cl",
+      "prixAchat": 1200,
+      "prixVente": 1600,
+      "quantiteStock": 22,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-01T08:30:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 8,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-01T17:10:00"
+  },
+  {
+    "id": 27,
+    "produit": {
+      "id": 1,
+      "nom": "Eau minerale 1.5L",
+      "description": "Bouteille d'eau",
+      "prixAchat": 300,
+      "prixVente": 500,
+      "quantiteStock": 60,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-06-26T08:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 50,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-02T08:30:00"
+  },
+  {
+    "id": 28,
+    "produit": {
+      "id": 1,
+      "nom": "Eau minerale 1.5L",
+      "description": "Bouteille d'eau",
+      "prixAchat": 300,
+      "prixVente": 500,
+      "quantiteStock": 60,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-06-26T08:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 20,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-02T12:45:00"
+  },
+  {
+    "id": 29,
+    "produit": {
+      "id": 13,
+      "nom": "Savon de toilette",
+      "description": "Savon 100g",
+      "prixAchat": 500,
+      "prixVente": 800,
+      "quantiteStock": 13,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-02T14:15:00",
+      "categorie": {
+        "id": 3,
+        "nom": "Hygiene",
+        "description": "Produits d'hygiene et de soin corporel"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 10,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-02T14:30:00"
+  },
+  {
+    "id": 30,
+    "produit": {
+      "id": 13,
+      "nom": "Savon de toilette",
+      "description": "Savon 100g",
+      "prixAchat": 500,
+      "prixVente": 800,
+      "quantiteStock": 13,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-02T14:15:00",
+      "categorie": {
+        "id": 3,
+        "nom": "Hygiene",
+        "description": "Produits d'hygiene et de soin corporel"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 7,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-03T09:15:00"
+  },
+  {
+    "id": 31,
+    "produit": {
+      "id": 14,
+      "nom": "Dentifrice 75ml",
+      "description": "Menthe fraîche",
+      "prixAchat": 800,
+      "prixVente": 1200,
+      "quantiteStock": 25,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-03T11:00:00",
+      "categorie": {
+        "id": 3,
+        "nom": "Hygiene",
+        "description": "Produits d'hygiene et de soin corporel"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 20,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-03T11:15:00"
+  },
+  {
+    "id": 32,
+    "produit": {
+      "id": 14,
+      "nom": "Dentifrice 75ml",
+      "description": "Menthe fraîche",
+      "prixAchat": 800,
+      "prixVente": 1200,
+      "quantiteStock": 25,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-03T11:00:00",
+      "categorie": {
+        "id": 3,
+        "nom": "Hygiene",
+        "description": "Produits d'hygiene et de soin corporel"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 5,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-03T16:30:00"
+  },
+  {
+    "id": 33,
+    "produit": {
+      "id": 11,
+      "nom": "Sel fin 1kg",
+      "description": "Sachet de sel",
+      "prixAchat": 250,
+      "prixVente": 400,
+      "quantiteStock": 40,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-06-30T09:00:00",
+      "categorie": {
+        "id": 2,
+        "nom": "Epicerie",
+        "description": "Produits alimentaires secs et pâtes"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 30,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-04T08:00:00"
+  },
+  {
+    "id": 34,
+    "produit": {
+      "id": 11,
+      "nom": "Sel fin 1kg",
+      "description": "Sachet de sel",
+      "prixAchat": 250,
+      "prixVente": 400,
+      "quantiteStock": 40,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-06-30T09:00:00",
+      "categorie": {
+        "id": 2,
+        "nom": "Epicerie",
+        "description": "Produits alimentaires secs et pâtes"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 10,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-04T14:20:00"
+  },
+  {
+    "id": 35,
+    "produit": {
+      "id": 12,
+      "nom": "Farine de blé 1kg",
+      "description": "Farine type 55",
+      "prixAchat": 800,
+      "prixVente": 1100,
+      "quantiteStock": 39,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-07-01T10:00:00",
+      "categorie": {
+        "id": 2,
+        "nom": "Epicerie",
+        "description": "Produits alimentaires secs et pâtes"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 25,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-04T10:00:00"
+  },
+  {
+    "id": 36,
+    "produit": {
+      "id": 12,
+      "nom": "Farine de blé 1kg",
+      "description": "Farine type 55",
+      "prixAchat": 800,
+      "prixVente": 1100,
+      "quantiteStock": 39,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-07-01T10:00:00",
+      "categorie": {
+        "id": 2,
+        "nom": "Epicerie",
+        "description": "Produits alimentaires secs et pâtes"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 8,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-05T11:00:00"
+  },
+  {
+    "id": 37,
+    "produit": {
+      "id": 15,
+      "nom": "Gel douche 250ml",
+      "description": "Parfum vanille",
+      "prixAchat": 1200,
+      "prixVente": 1700,
+      "quantiteStock": 19,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-04T13:00:00",
+      "categorie": {
+        "id": 3,
+        "nom": "Hygiene",
+        "description": "Produits d'hygiene et de soin corporel"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 15,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-05T09:30:00"
+  },
+  {
+    "id": 38,
+    "produit": {
+      "id": 15,
+      "nom": "Gel douche 250ml",
+      "description": "Parfum vanille",
+      "prixAchat": 1200,
+      "prixVente": 1700,
+      "quantiteStock": 19,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-04T13:00:00",
+      "categorie": {
+        "id": 3,
+        "nom": "Hygiene",
+        "description": "Produits d'hygiene et de soin corporel"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 6,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-05T15:45:00"
+  },
+  {
+    "id": 39,
+    "produit": {
+      "id": 2,
+      "nom": "Soda 33cl",
+      "description": "Boisson gazeuse cola",
+      "prixAchat": 400,
+      "prixVente": 700,
+      "quantiteStock": 35,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-06-27T09:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 40,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-05T09:00:00"
+  },
+  {
+    "id": 40,
+    "produit": {
+      "id": 2,
+      "nom": "Soda 33cl",
+      "description": "Boisson gazeuse cola",
+      "prixAchat": 400,
+      "prixVente": 700,
+      "quantiteStock": 35,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-06-27T09:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 15,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-06T10:30:00"
+  },
+  {
+    "id": 41,
+    "produit": {
+      "id": 17,
+      "nom": "Papier toilette (x6)",
+      "description": "Paquet de 6 rouleaux",
+      "prixAchat": 2000,
+      "prixVente": 2800,
+      "quantiteStock": 45,
+      "seuilAlerte": 8,
+      "dateAjout": "2026-07-06T08:00:00",
+      "categorie": {
+        "id": 3,
+        "nom": "Hygiene",
+        "description": "Produits d'hygiene et de soin corporel"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 30,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-06T08:30:00"
+  },
+  {
+    "id": 42,
+    "produit": {
+      "id": 17,
+      "nom": "Papier toilette (x6)",
+      "description": "Paquet de 6 rouleaux",
+      "prixAchat": 2000,
+      "prixVente": 2800,
+      "quantiteStock": 45,
+      "seuilAlerte": 8,
+      "dateAjout": "2026-07-06T08:00:00",
+      "categorie": {
+        "id": 3,
+        "nom": "Hygiene",
+        "description": "Produits d'hygiene et de soin corporel"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 10,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-06T16:00:00"
+  },
+  {
+    "id": 43,
+    "produit": {
+      "id": 18,
+      "nom": "Déodorant spray",
+      "description": "Fraîcheur intense",
+      "prixAchat": 1500,
+      "prixVente": 2200,
+      "quantiteStock": 18,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-07T09:30:00",
+      "categorie": {
+        "id": 3,
+        "nom": "Hygiene",
+        "description": "Produits d'hygiene et de soin corporel"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 20,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-07T09:45:00"
+  },
+  {
+    "id": 44,
+    "produit": {
+      "id": 18,
+      "nom": "Déodorant spray",
+      "description": "Fraîcheur intense",
+      "prixAchat": 1500,
+      "prixVente": 2200,
+      "quantiteStock": 18,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-07T09:30:00",
+      "categorie": {
+        "id": 3,
+        "nom": "Hygiene",
+        "description": "Produits d'hygiene et de soin corporel"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 11,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-07T14:15:00"
+  },
+  {
+    "id": 45,
+    "produit": {
+      "id": 19,
+      "nom": "Lait demi-ecreme 1L",
+      "description": "Brique de lait",
+      "prixAchat": 700,
+      "prixVente": 950,
+      "quantiteStock": 25,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-08T07:45:00",
+      "categorie": {
+        "id": 4,
+        "nom": "Frais",
+        "description": "Produits laitiers, œufs et frais"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 25,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-08T08:15:00"
+  },
+  {
+    "id": 46,
+    "produit": {
+      "id": 19,
+      "nom": "Lait demi-ecreme 1L",
+      "description": "Brique de lait",
+      "prixAchat": 700,
+      "prixVente": 950,
+      "quantiteStock": 25,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-08T07:45:00",
+      "categorie": {
+        "id": 4,
+        "nom": "Frais",
+        "description": "Produits laitiers, œufs et frais"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 10,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-08T12:30:00"
+  },
+  {
+    "id": 47,
+    "produit": {
+      "id": 42,
+      "nom": "Ravioli bœuf 800g",
+      "description": "Boîte repas",
+      "prixAchat": 2000,
+      "prixVente": 2700,
+      "quantiteStock": 24,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-08T14:00:00",
+      "categorie": {
+        "id": 7,
+        "nom": "Conserves",
+        "description": "Plats cuisinés, thon, sardines en boîte"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 20,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-08T14:10:00"
+  },
+  {
+    "id": 48,
+    "produit": {
+      "id": 42,
+      "nom": "Ravioli bœuf 800g",
+      "description": "Boîte repas",
+      "prixAchat": 2000,
+      "prixVente": 2700,
+      "quantiteStock": 24,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-08T14:00:00",
+      "categorie": {
+        "id": 7,
+        "nom": "Conserves",
+        "description": "Plats cuisinés, thon, sardines en boîte"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 8,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-09T09:20:00"
+  },
+  {
+    "id": 49,
+    "produit": {
+      "id": 20,
+      "nom": "Yaourt nature (x4)",
+      "description": "Pack de 4",
+      "prixAchat": 1200,
+      "prixVente": 1600,
+      "quantiteStock": 18,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-09T11:20:00",
+      "categorie": {
+        "id": 4,
+        "nom": "Frais",
+        "description": "Produits laitiers, œufs et frais"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 15,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-09T10:30:00"
+  },
+  {
+    "id": 50,
+    "produit": {
+      "id": 20,
+      "nom": "Yaourt nature (x4)",
+      "description": "Pack de 4",
+      "prixAchat": 1200,
+      "prixVente": 1600,
+      "quantiteStock": 18,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-09T11:20:00",
+      "categorie": {
+        "id": 4,
+        "nom": "Frais",
+        "description": "Produits laitiers, œufs et frais"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 7,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-09T17:00:00"
+  },
+  {
+    "id": 51,
+    "produit": {
+      "id": 21,
+      "nom": "Beurre doux 250g",
+      "description": "Plaquette de beurre",
+      "prixAchat": 1400,
+      "prixVente": 1900,
+      "quantiteStock": 23,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-10T10:00:00",
+      "categorie": {
+        "id": 4,
+        "nom": "Frais",
+        "description": "Produits laitiers, œufs et frais"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 20,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-10T08:00:00"
+  },
+  {
+    "id": 52,
+    "produit": {
+      "id": 21,
+      "nom": "Beurre doux 250g",
+      "description": "Plaquette de beurre",
+      "prixAchat": 1400,
+      "prixVente": 1900,
+      "quantiteStock": 23,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-10T10:00:00",
+      "categorie": {
+        "id": 4,
+        "nom": "Frais",
+        "description": "Produits laitiers, œufs et frais"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 9,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-10T13:20:00"
+  },
+  {
+    "id": 53,
+    "produit": {
+      "id": 51,
+      "nom": "Lait 2eme âge 900g",
+      "description": "Boîte de lait infantile",
+      "prixAchat": 7500,
+      "prixVente": 9500,
+      "quantiteStock": 16,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-05T14:00:00",
+      "categorie": {
+        "id": 9,
+        "nom": "Bbebe",
+        "description": "Alimentation et soins pour bébés"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 25,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-10T09:30:00"
+  },
+  {
+    "id": 54,
+    "produit": {
+      "id": 51,
+      "nom": "Lait 2eme âge 900g",
+      "description": "Boîte de lait infantile",
+      "prixAchat": 7500,
+      "prixVente": 9500,
+      "quantiteStock": 16,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-05T14:00:00",
+      "categorie": {
+        "id": 9,
+        "nom": "Bbebe",
+        "description": "Alimentation et soins pour bébés"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 17,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-11T11:10:00"
+  },
+  {
+    "id": 55,
+    "produit": {
+      "id": 22,
+      "nom": "Fromage râpé 200g",
+      "description": "Emmental râpé",
+      "prixAchat": 1600,
+      "prixVente": 2200,
+      "quantiteStock": 20,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-11T12:00:00",
+      "categorie": {
+        "id": 4,
+        "nom": "Frais",
+        "description": "Produits laitiers, œufs et frais"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 20,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-11T08:45:00"
+  },
+  {
+    "id": 56,
+    "produit": {
+      "id": 22,
+      "nom": "Fromage râpé 200g",
+      "description": "Emmental râpé",
+      "prixAchat": 1600,
+      "prixVente": 2200,
+      "quantiteStock": 20,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-11T12:00:00",
+      "categorie": {
+        "id": 4,
+        "nom": "Frais",
+        "description": "Produits laitiers, œufs et frais"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 10,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-11T15:30:00"
+  },
+  {
+    "id": 57,
+    "produit": {
+      "id": 23,
+      "nom": "Œufs x6",
+      "description": "Boîte de 6 œufs frais",
+      "prixAchat": 900,
+      "prixVente": 1200,
+      "quantiteStock": 53,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-07-12T14:00:00",
+      "categorie": {
+        "id": 4,
+        "nom": "Frais",
+        "description": "Produits laitiers, œufs et frais"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 35,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-12T10:00:00"
+  },
+  {
+    "id": 58,
+    "produit": {
+      "id": 23,
+      "nom": "Œufs x6",
+      "description": "Boîte de 6 œufs frais",
+      "prixAchat": 900,
+      "prixVente": 1200,
+      "quantiteStock": 53,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-07-12T14:00:00",
+      "categorie": {
+        "id": 4,
+        "nom": "Frais",
+        "description": "Produits laitiers, œufs et frais"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 12,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-12T16:45:00"
+  },
+  {
+    "id": 59,
+    "produit": {
+      "id": 24,
+      "nom": "Crème fraîche 20cl",
+      "description": "Pot de crème",
+      "prixAchat": 1000,
+      "prixVente": 1400,
+      "quantiteStock": 20,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-13T16:00:00",
+      "categorie": {
+        "id": 4,
+        "nom": "Frais",
+        "description": "Produits laitiers, œufs et frais"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 15,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-13T09:15:00"
+  },
+  {
+    "id": 60,
+    "produit": {
+      "id": 24,
+      "nom": "Crème fraîche 20cl",
+      "description": "Pot de crème",
+      "prixAchat": 1000,
+      "prixVente": 1400,
+      "quantiteStock": 20,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-13T16:00:00",
+      "categorie": {
+        "id": 4,
+        "nom": "Frais",
+        "description": "Produits laitiers, œufs et frais"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 6,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-13T14:00:00"
+  },
+  {
+    "id": 61,
+    "produit": {
+      "id": 25,
+      "nom": "Lessive en poudre 1kg",
+      "description": "Poudre lave-linge",
+      "prixAchat": 2500,
+      "prixVente": 3200,
+      "quantiteStock": 27,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-14T16:00:00",
+      "categorie": {
+        "id": 5,
+        "nom": "Entretien",
+        "description": "Produits de nettoyage et maison"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 30,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-14T08:30:00"
+  },
+  {
+    "id": 62,
+    "produit": {
+      "id": 25,
+      "nom": "Lessive en poudre 1kg",
+      "description": "Poudre lave-linge",
+      "prixAchat": 2500,
+      "prixVente": 3200,
+      "quantiteStock": 27,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-14T16:00:00",
+      "categorie": {
+        "id": 5,
+        "nom": "Entretien",
+        "description": "Produits de nettoyage et maison"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 18,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-14T15:20:00"
+  },
+  {
+    "id": 63,
+    "produit": {
+      "id": 53,
+      "nom": "Petite pot fruit (x2)",
+      "description": "Compote pomme",
+      "prixAchat": 1400,
+      "prixVente": 1900,
+      "quantiteStock": 32,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-14T09:00:00",
+      "categorie": {
+        "id": 9,
+        "nom": "Bbebe",
+        "description": "Alimentation et soins pour bébés"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 25,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-14T10:30:00"
+  },
+  {
+    "id": 64,
+    "produit": {
+      "id": 53,
+      "nom": "Petite pot fruit (x2)",
+      "description": "Compote pomme",
+      "prixAchat": 1400,
+      "prixVente": 1900,
+      "quantiteStock": 32,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-14T09:00:00",
+      "categorie": {
+        "id": 9,
+        "nom": "Bbebe",
+        "description": "Alimentation et soins pour bébés"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 9,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-15T11:00:00"
+  },
+  {
+    "id": 65,
+    "produit": {
+      "id": 26,
+      "nom": "Liquide vaisselle 500ml",
+      "description": "Senteur citron",
+      "prixAchat": 900,
+      "prixVente": 1300,
+      "quantiteStock": 30,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-07-15T09:00:00",
+      "categorie": {
+        "id": 5,
+        "nom": "Entretien",
+        "description": "Produits de nettoyage et maison"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 25,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-15T09:10:00"
+  },
+  {
+    "id": 66,
+    "produit": {
+      "id": 26,
+      "nom": "Liquide vaisselle 500ml",
+      "description": "Senteur citron",
+      "prixAchat": 900,
+      "prixVente": 1300,
+      "quantiteStock": 30,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-07-15T09:00:00",
+      "categorie": {
+        "id": 5,
+        "nom": "Entretien",
+        "description": "Produits de nettoyage et maison"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 10,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-15T16:30:00"
+  },
+  {
+    "id": 67,
+    "produit": {
+      "id": 27,
+      "nom": "Éponges (x3)",
+      "description": "Lot de 3 éponges",
+      "prixAchat": 400,
+      "prixVente": 700,
+      "quantiteStock": 45,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-07-16T10:00:00",
+      "categorie": {
+        "id": 5,
+        "nom": "Entretien",
+        "description": "Produits de nettoyage et maison"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 40,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-16T08:00:00"
+  },
+  {
+    "id": 68,
+    "produit": {
+      "id": 27,
+      "nom": "Éponges (x3)",
+      "description": "Lot de 3 éponges",
+      "prixAchat": 400,
+      "prixVente": 700,
+      "quantiteStock": 45,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-07-16T10:00:00",
+      "categorie": {
+        "id": 5,
+        "nom": "Entretien",
+        "description": "Produits de nettoyage et maison"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 15,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-16T13:45:00"
+  },
+  {
+    "id": 69,
+    "produit": {
+      "id": 28,
+      "nom": "Nettoyant sol 1L",
+      "description": "Multi-usages",
+      "prixAchat": 1500,
+      "prixVente": 2100,
+      "quantiteStock": 28,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-17T11:00:00",
+      "categorie": {
+        "id": 5,
+        "nom": "Entretien",
+        "description": "Produits de nettoyage et maison"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 20,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-17T09:20:00"
+  },
+  {
+    "id": 70,
+    "produit": {
+      "id": 28,
+      "nom": "Nettoyant sol 1L",
+      "description": "Multi-usages",
+      "prixAchat": 1500,
+      "prixVente": 2100,
+      "quantiteStock": 28,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-17T11:00:00",
+      "categorie": {
+        "id": 5,
+        "nom": "Entretien",
+        "description": "Produits de nettoyage et maison"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 7,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-17T15:10:00"
+  },
+  {
+    "id": 71,
+    "produit": {
+      "id": 29,
+      "nom": "Javel 1L",
+      "description": "Flacon berlingot",
+      "prixAchat": 600,
+      "prixVente": 900,
+      "quantiteStock": 33,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-18T13:00:00",
+      "categorie": {
+        "id": 5,
+        "nom": "Entretien",
+        "description": "Produits de nettoyage et maison"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 25,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-18T08:45:00"
+  },
+  {
+    "id": 72,
+    "produit": {
+      "id": 29,
+      "nom": "Javel 1L",
+      "description": "Flacon berlingot",
+      "prixAchat": 600,
+      "prixVente": 900,
+      "quantiteStock": 33,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-18T13:00:00",
+      "categorie": {
+        "id": 5,
+        "nom": "Entretien",
+        "description": "Produits de nettoyage et maison"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 10,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-18T14:00:00"
+  },
+  {
+    "id": 73,
+    "produit": {
+      "id": 48,
+      "nom": "Glaces vanille 1L",
+      "description": "Bac de crème glacée",
+      "prixAchat": 2500,
+      "prixVente": 3400,
+      "quantiteStock": 12,
+      "seuilAlerte": 2,
+      "dateAjout": "2026-07-18T11:00:00",
+      "categorie": {
+        "id": 8,
+        "nom": "Surgeles",
+        "description": "Légumes et plats surgelés"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 30,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-18T10:00:00"
+  },
+  {
+    "id": 74,
+    "produit": {
+      "id": 48,
+      "nom": "Glaces vanille 1L",
+      "description": "Bac de crème glacée",
+      "prixAchat": 2500,
+      "prixVente": 3400,
+      "quantiteStock": 12,
+      "seuilAlerte": 2,
+      "dateAjout": "2026-07-18T11:00:00",
+      "categorie": {
+        "id": 8,
+        "nom": "Surgeles",
+        "description": "Légumes et plats surgelés"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 24,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-19T11:30:00"
+  },
+  {
+    "id": 75,
+    "produit": {
+      "id": 30,
+      "nom": "Sacs poubelle 30L",
+      "description": "Rouleau de 25 sacs",
+      "prixAchat": 1100,
+      "prixVente": 1600,
+      "quantiteStock": 37,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-07-19T14:00:00",
+      "categorie": {
+        "id": 5,
+        "nom": "Entretien",
+        "description": "Produits de nettoyage et maison"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 25,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-19T09:15:00"
+  },
+  {
+    "id": 76,
+    "produit": {
+      "id": 30,
+      "nom": "Sacs poubelle 30L",
+      "description": "Rouleau de 25 sacs",
+      "prixAchat": 1100,
+      "prixVente": 1600,
+      "quantiteStock": 37,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-07-19T14:00:00",
+      "categorie": {
+        "id": 5,
+        "nom": "Entretien",
+        "description": "Produits de nettoyage et maison"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 10,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-19T16:20:00"
+  },
+  {
+    "id": 77,
+    "produit": {
+      "id": 31,
+      "nom": "Pain de mie 500g",
+      "description": "Tranches nature",
+      "prixAchat": 1000,
+      "prixVente": 1400,
+      "quantiteStock": 18,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-20T07:00:00",
+      "categorie": {
+        "id": 6,
+        "nom": "Boulangerie",
+        "description": "Pain, viennoiseries et biscuits"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 20,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-20T07:30:00"
+  },
+  {
+    "id": 78,
+    "produit": {
+      "id": 31,
+      "nom": "Pain de mie 500g",
+      "description": "Tranches nature",
+      "prixAchat": 1000,
+      "prixVente": 1400,
+      "quantiteStock": 18,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-20T07:00:00",
+      "categorie": {
+        "id": 6,
+        "nom": "Boulangerie",
+        "description": "Pain, viennoiseries et biscuits"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 12,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-20T12:00:00"
+  },
+  {
+    "id": 79,
+    "produit": {
+      "id": 32,
+      "nom": "Biscuits secs 200g",
+      "description": "Paquet de biscuits",
+      "prixAchat": 800,
+      "prixVente": 1200,
+      "quantiteStock": 40,
+      "seuilAlerte": 8,
+      "dateAjout": "2026-07-20T08:00:00",
+      "categorie": {
+        "id": 6,
+        "nom": "Boulangerie",
+        "description": "Pain, viennoiseries et biscuits"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 30,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-20T09:00:00"
+  },
+  {
+    "id": 80,
+    "produit": {
+      "id": 32,
+      "nom": "Biscuits secs 200g",
+      "description": "Paquet de biscuits",
+      "prixAchat": 800,
+      "prixVente": 1200,
+      "quantiteStock": 40,
+      "seuilAlerte": 8,
+      "dateAjout": "2026-07-20T08:00:00",
+      "categorie": {
+        "id": 6,
+        "nom": "Boulangerie",
+        "description": "Pain, viennoiseries et biscuits"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 15,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-20T17:10:00"
+  },
+  {
+    "id": 81,
+    "produit": {
+      "id": 33,
+      "nom": "Croissants (x4)",
+      "description": "Viennoiseries pur beurre",
+      "prixAchat": 1500,
+      "prixVente": 2000,
+      "quantiteStock": 9,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-21T07:30:00",
+      "categorie": {
+        "id": 6,
+        "nom": "Boulangerie",
+        "description": "Pain, viennoiseries et biscuits"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 15,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-21T07:15:00"
+  },
+  {
+    "id": 82,
+    "produit": {
+      "id": 33,
+      "nom": "Croissants (x4)",
+      "description": "Viennoiseries pur beurre",
+      "prixAchat": 1500,
+      "prixVente": 2000,
+      "quantiteStock": 9,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-21T07:30:00",
+      "categorie": {
+        "id": 6,
+        "nom": "Boulangerie",
+        "description": "Pain, viennoiseries et biscuits"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 12,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-21T11:30:00"
+  },
+  {
+    "id": 83,
+    "produit": {
+      "id": 34,
+      "nom": "Brioche tranchée",
+      "description": "Brioche pur beurre",
+      "prixAchat": 1800,
+      "prixVente": 2400,
+      "quantiteStock": 14,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-21T09:00:00",
+      "categorie": {
+        "id": 6,
+        "nom": "Boulangerie",
+        "description": "Pain, viennoiseries et biscuits"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 15,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-21T08:30:00"
+  },
+  {
+    "id": 84,
+    "produit": {
+      "id": 34,
+      "nom": "Brioche tranchée",
+      "description": "Brioche pur beurre",
+      "prixAchat": 1800,
+      "prixVente": 2400,
+      "quantiteStock": 14,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-21T09:00:00",
+      "categorie": {
+        "id": 6,
+        "nom": "Boulangerie",
+        "description": "Pain, viennoiseries et biscuits"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 9,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-21T15:45:00"
+  },
+  {
+    "id": 85,
+    "produit": {
+      "id": 35,
+      "nom": "Galettes salées",
+      "description": "Paquet de 10",
+      "prixAchat": 900,
+      "prixVente": 1300,
+      "quantiteStock": 26,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-22T10:00:00",
+      "categorie": {
+        "id": 6,
+        "nom": "Boulangerie",
+        "description": "Pain, viennoiseries et biscuits"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 25,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-22T09:00:00"
+  },
+  {
+    "id": 86,
+    "produit": {
+      "id": 35,
+      "nom": "Galettes salées",
+      "description": "Paquet de 10",
+      "prixAchat": 900,
+      "prixVente": 1300,
+      "quantiteStock": 26,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-22T10:00:00",
+      "categorie": {
+        "id": 6,
+        "nom": "Boulangerie",
+        "description": "Pain, viennoiseries et biscuits"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 14,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-22T14:20:00"
+  },
+  {
+    "id": 87,
+    "produit": {
+      "id": 36,
+      "nom": "Petits gâteaux choco",
+      "description": "Boîte de 12",
+      "prixAchat": 1300,
+      "prixVente": 1800,
+      "quantiteStock": 25,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-22T11:00:00",
+      "categorie": {
+        "id": 6,
+        "nom": "Boulangerie",
+        "description": "Pain, viennoiseries et biscuits"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 20,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-22T10:15:00"
+  },
+  {
+    "id": 88,
+    "produit": {
+      "id": 36,
+      "nom": "Petits gâteaux choco",
+      "description": "Boîte de 12",
+      "prixAchat": 1300,
+      "prixVente": 1800,
+      "quantiteStock": 25,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-22T11:00:00",
+      "categorie": {
+        "id": 6,
+        "nom": "Boulangerie",
+        "description": "Pain, viennoiseries et biscuits"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 9,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-22T16:30:00"
+  },
+  {
+    "id": 89,
+    "produit": {
+      "id": 3,
+      "nom": "Jus d'orange 1L",
+      "description": "Jus pur jus",
+      "prixAchat": 900,
+      "prixVente": 1300,
+      "quantiteStock": 30,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-06-28T10:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 40,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-23T08:30:00"
+  },
+  {
+    "id": 90,
+    "produit": {
+      "id": 3,
+      "nom": "Jus d'orange 1L",
+      "description": "Jus pur jus",
+      "prixAchat": 900,
+      "prixVente": 1300,
+      "quantiteStock": 30,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-06-28T10:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 25,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-23T13:10:00"
+  },
+  {
+    "id": 91,
+    "produit": {
+      "id": 38,
+      "nom": "Sardines à l'huile 125g",
+      "description": "Boîte de sardines",
+      "prixAchat": 800,
+      "prixVente": 1200,
+      "quantiteStock": 28,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-06-28T13:00:00",
+      "categorie": {
+        "id": 7,
+        "nom": "Conserves",
+        "description": "Plats cuisinés, thon, sardines en boîte"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 25,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-23T10:00:00"
+  },
+  {
+    "id": 92,
+    "produit": {
+      "id": 38,
+      "nom": "Sardines à l'huile 125g",
+      "description": "Boîte de sardines",
+      "prixAchat": 800,
+      "prixVente": 1200,
+      "quantiteStock": 28,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-06-28T13:00:00",
+      "categorie": {
+        "id": 7,
+        "nom": "Conserves",
+        "description": "Plats cuisinés, thon, sardines en boîte"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 15,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-23T17:00:00"
+  },
+  {
+    "id": 93,
+    "produit": {
+      "id": 39,
+      "nom": "Tomates concassées 400g",
+      "description": "Boîte de conserve",
+      "prixAchat": 600,
+      "prixVente": 900,
+      "quantiteStock": 53,
+      "seuilAlerte": 8,
+      "dateAjout": "2026-06-30T15:00:00",
+      "categorie": {
+        "id": 7,
+        "nom": "Conserves",
+        "description": "Plats cuisinés, thon, sardines en boîte"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 35,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-24T08:00:00"
+  },
+  {
+    "id": 94,
+    "produit": {
+      "id": 39,
+      "nom": "Tomates concassées 400g",
+      "description": "Boîte de conserve",
+      "prixAchat": 600,
+      "prixVente": 900,
+      "quantiteStock": 53,
+      "seuilAlerte": 8,
+      "dateAjout": "2026-06-30T15:00:00",
+      "categorie": {
+        "id": 7,
+        "nom": "Conserves",
+        "description": "Plats cuisinés, thon, sardines en boîte"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 12,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-24T11:45:00"
+  },
+  {
+    "id": 95,
+    "produit": {
+      "id": 40,
+      "nom": "Petits pois & carottes",
+      "description": "Boîte 400g",
+      "prixAchat": 900,
+      "prixVente": 1300,
+      "quantiteStock": 38,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-07-02T10:00:00",
+      "categorie": {
+        "id": 7,
+        "nom": "Conserves",
+        "description": "Plats cuisinés, thon, sardines en boîte"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 30,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-24T09:30:00"
+  },
+  {
+    "id": 96,
+    "produit": {
+      "id": 40,
+      "nom": "Petits pois & carottes",
+      "description": "Boîte 400g",
+      "prixAchat": 900,
+      "prixVente": 1300,
+      "quantiteStock": 38,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-07-02T10:00:00",
+      "categorie": {
+        "id": 7,
+        "nom": "Conserves",
+        "description": "Plats cuisinés, thon, sardines en boîte"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 14,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-24T15:20:00"
+  },
+  {
+    "id": 97,
+    "produit": {
+      "id": 41,
+      "nom": "Maïs doux 300g",
+      "description": "Boîte de maïs",
+      "prixAchat": 700,
+      "prixVente": 1000,
+      "quantiteStock": 39,
+      "seuilAlerte": 7,
+      "dateAjout": "2026-07-05T12:00:00",
+      "categorie": {
+        "id": 7,
+        "nom": "Conserves",
+        "description": "Plats cuisinés, thon, sardines en boîte"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 30,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-25T08:45:00"
+  },
+  {
+    "id": 98,
+    "produit": {
+      "id": 41,
+      "nom": "Maïs doux 300g",
+      "description": "Boîte de maïs",
+      "prixAchat": 700,
+      "prixVente": 1000,
+      "quantiteStock": 39,
+      "seuilAlerte": 7,
+      "dateAjout": "2026-07-05T12:00:00",
+      "categorie": {
+        "id": 7,
+        "nom": "Conserves",
+        "description": "Plats cuisinés, thon, sardines en boîte"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 16,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-25T12:30:00"
+  },
+  {
+    "id": 99,
+    "produit": {
+      "id": 43,
+      "nom": "Frites surgelées 1kg",
+      "description": "Sachet de frites",
+      "prixAchat": 1500,
+      "prixVente": 2100,
+      "quantiteStock": 22,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-03T16:00:00",
+      "categorie": {
+        "id": 8,
+        "nom": "Surgeles",
+        "description": "Légumes et plats surgelés"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 25,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-25T10:00:00"
+  },
+  {
+    "id": 100,
+    "produit": {
+      "id": 43,
+      "nom": "Frites surgelées 1kg",
+      "description": "Sachet de frites",
+      "prixAchat": 1500,
+      "prixVente": 2100,
+      "quantiteStock": 22,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-03T16:00:00",
+      "categorie": {
+        "id": 8,
+        "nom": "Surgeles",
+        "description": "Légumes et plats surgelés"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 18,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-25T16:15:00"
+  },
+  {
+    "id": 101,
+    "produit": {
+      "id": 44,
+      "nom": "Légumes pour soupe",
+      "description": "Sachet 1kg",
+      "prixAchat": 1300,
+      "prixVente": 1800,
+      "quantiteStock": 16,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-06T10:00:00",
+      "categorie": {
+        "id": 8,
+        "nom": "Surgeles",
+        "description": "Légumes et plats surgelés"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 20,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-26T07:30:00"
+  },
+  {
+    "id": 102,
+    "produit": {
+      "id": 44,
+      "nom": "Légumes pour soupe",
+      "description": "Sachet 1kg",
+      "prixAchat": 1300,
+      "prixVente": 1800,
+      "quantiteStock": 16,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-06T10:00:00",
+      "categorie": {
+        "id": 8,
+        "nom": "Surgeles",
+        "description": "Légumes et plats surgelés"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 14,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-26T10:00:00"
+  },
+  {
+    "id": 103,
+    "produit": {
+      "id": 45,
+      "nom": "Steaks hachés (x4)",
+      "description": "Surgelés pur bœuf",
+      "prixAchat": 2200,
+      "prixVente": 2900,
+      "quantiteStock": 12,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-09T11:00:00",
+      "categorie": {
+        "id": 8,
+        "nom": "Surgeles",
+        "description": "Légumes et plats surgelés"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 15,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-26T08:00:00"
+  },
+  {
+    "id": 104,
+    "produit": {
+      "id": 45,
+      "nom": "Steaks hachés (x4)",
+      "description": "Surgelés pur bœuf",
+      "prixAchat": 2200,
+      "prixVente": 2900,
+      "quantiteStock": 12,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-09T11:00:00",
+      "categorie": {
+        "id": 8,
+        "nom": "Surgeles",
+        "description": "Légumes et plats surgelés"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 11,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-26T11:15:00"
+  },
+  {
+    "id": 105,
+    "produit": {
+      "id": 46,
+      "nom": "Poissons panés (x4)",
+      "description": "Filets de colin",
+      "prixAchat": 1900,
+      "prixVente": 2500,
+      "quantiteStock": 18,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-12T15:00:00",
+      "categorie": {
+        "id": 8,
+        "nom": "Surgeles",
+        "description": "Légumes et plats surgelés"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 20,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-26T08:30:00"
+  },
+  {
+    "id": 106,
+    "produit": {
+      "id": 46,
+      "nom": "Poissons panés (x4)",
+      "description": "Filets de colin",
+      "prixAchat": 1900,
+      "prixVente": 2500,
+      "quantiteStock": 18,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-12T15:00:00",
+      "categorie": {
+        "id": 8,
+        "nom": "Surgeles",
+        "description": "Légumes et plats surgelés"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 13,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-26T12:00:00"
+  },
+  {
+    "id": 107,
+    "produit": {
+      "id": 47,
+      "nom": "Pizzas surgelées",
+      "description": "Pizza 3 fromages",
+      "prixAchat": 2000,
+      "prixVente": 2800,
+      "quantiteStock": 11,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-15T09:00:00",
+      "categorie": {
+        "id": 8,
+        "nom": "Surgeles",
+        "description": "Légumes et plats surgelés"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 15,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-26T09:00:00"
+  },
+  {
+    "id": 108,
+    "produit": {
+      "id": 47,
+      "nom": "Pizzas surgelées",
+      "description": "Pizza 3 fromages",
+      "prixAchat": 2000,
+      "prixVente": 2800,
+      "quantiteStock": 11,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-15T09:00:00",
+      "categorie": {
+        "id": 8,
+        "nom": "Surgeles",
+        "description": "Légumes et plats surgelés"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 11,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-26T12:45:00"
+  },
+  {
+    "id": 109,
+    "produit": {
+      "id": 50,
+      "nom": "Lingettes bébé (x72)",
+      "description": "Paquet sensible",
+      "prixAchat": 1200,
+      "prixVente": 1700,
+      "quantiteStock": 30,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-07-01T10:00:00",
+      "categorie": {
+        "id": 9,
+        "nom": "Bbebe",
+        "description": "Alimentation et soins pour bébés"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 25,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-26T09:30:00"
+  },
+  {
+    "id": 110,
+    "produit": {
+      "id": 50,
+      "nom": "Lingettes bébé (x72)",
+      "description": "Paquet sensible",
+      "prixAchat": 1200,
+      "prixVente": 1700,
+      "quantiteStock": 30,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-07-01T10:00:00",
+      "categorie": {
+        "id": 9,
+        "nom": "Bbebe",
+        "description": "Alimentation et soins pour bébés"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 15,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-26T13:10:00"
+  },
+  {
+    "id": 111,
+    "produit": {
+      "id": 52,
+      "nom": "Petite pot légume (x2)",
+      "description": "Purée carotte",
+      "prixAchat": 1500,
+      "prixVente": 2100,
+      "quantiteStock": 19,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-10T16:00:00",
+      "categorie": {
+        "id": 9,
+        "nom": "Bbebe",
+        "description": "Alimentation et soins pour bébés"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 15,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-26T10:00:00"
+  },
+  {
+    "id": 112,
+    "produit": {
+      "id": 52,
+      "nom": "Petite pot légume (x2)",
+      "description": "Purée carotte",
+      "prixAchat": 1500,
+      "prixVente": 2100,
+      "quantiteStock": 19,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-10T16:00:00",
+      "categorie": {
+        "id": 9,
+        "nom": "Bbebe",
+        "description": "Alimentation et soins pour bébés"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 10,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-26T13:40:00"
+  },
+  {
+    "id": 113,
+    "produit": {
+      "id": 54,
+      "nom": "Liniment oléo-calcaire",
+      "description": "Flacon 500ml",
+      "prixAchat": 3000,
+      "prixVente": 4000,
+      "quantiteStock": 15,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-19T11:00:00",
+      "categorie": {
+        "id": 9,
+        "nom": "Bbebe",
+        "description": "Alimentation et soins pour bébés"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 20,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-26T10:30:00"
+  },
+  {
+    "id": 114,
+    "produit": {
+      "id": 54,
+      "nom": "Liniment oléo-calcaire",
+      "description": "Flacon 500ml",
+      "prixAchat": 3000,
+      "prixVente": 4000,
+      "quantiteStock": 15,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-19T11:00:00",
+      "categorie": {
+        "id": 9,
+        "nom": "Bbebe",
+        "description": "Alimentation et soins pour bébés"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 14,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-26T14:00:00"
+  },
+  {
+    "id": 115,
+    "produit": {
+      "id": 56,
+      "nom": "Chocolat noir 100g",
+      "description": "Tablette 70%",
+      "prixAchat": 1000,
+      "prixVente": 1500,
+      "quantiteStock": 40,
+      "seuilAlerte": 7,
+      "dateAjout": "2026-06-29T11:00:00",
+      "categorie": {
+        "id": 10,
+        "nom": "Snacks",
+        "description": "Chips, biscuits apéritifs et chocolats"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 35,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-26T11:00:00"
+  },
+  {
+    "id": 116,
+    "produit": {
+      "id": 56,
+      "nom": "Chocolat noir 100g",
+      "description": "Tablette 70%",
+      "prixAchat": 1000,
+      "prixVente": 1500,
+      "quantiteStock": 40,
+      "seuilAlerte": 7,
+      "dateAjout": "2026-06-29T11:00:00",
+      "categorie": {
+        "id": 10,
+        "nom": "Snacks",
+        "description": "Chips, biscuits apéritifs et chocolats"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 20,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-26T14:20:00"
+  },
+  {
+    "id": 117,
+    "produit": {
+      "id": 57,
+      "nom": "Biscuits au chocolat",
+      "description": "Paquet familial",
+      "prixAchat": 1200,
+      "prixVente": 1700,
+      "quantiteStock": 31,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-07-04T15:00:00",
+      "categorie": {
+        "id": 10,
+        "nom": "Snacks",
+        "description": "Chips, biscuits apéritifs et chocolats"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 30,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-26T11:15:00"
+  },
+  {
+    "id": 118,
+    "produit": {
+      "id": 57,
+      "nom": "Biscuits au chocolat",
+      "description": "Paquet familial",
+      "prixAchat": 1200,
+      "prixVente": 1700,
+      "quantiteStock": 31,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-07-04T15:00:00",
+      "categorie": {
+        "id": 10,
+        "nom": "Snacks",
+        "description": "Chips, biscuits apéritifs et chocolats"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 19,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-26T14:45:00"
+  },
+  {
+    "id": 119,
+    "produit": {
+      "id": 58,
+      "nom": "Cacahuètes salées",
+      "description": "Sachet 200g",
+      "prixAchat": 900,
+      "prixVente": 1300,
+      "quantiteStock": 27,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-09T10:00:00",
+      "categorie": {
+        "id": 10,
+        "nom": "Snacks",
+        "description": "Chips, biscuits apéritifs et chocolats"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 25,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-26T11:30:00"
+  },
+  {
+    "id": 120,
+    "produit": {
+      "id": 58,
+      "nom": "Cacahuètes salées",
+      "description": "Sachet 200g",
+      "prixAchat": 900,
+      "prixVente": 1300,
+      "quantiteStock": 27,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-09T10:00:00",
+      "categorie": {
+        "id": 10,
+        "nom": "Snacks",
+        "description": "Chips, biscuits apéritifs et chocolats"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 16,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-26T15:00:00"
+  },
+  {
+    "id": 121,
+    "produit": {
+      "id": 59,
+      "nom": "Bonbons gélifiés",
+      "description": "Sachet 250g",
+      "prixAchat": 800,
+      "prixVente": 1200,
+      "quantiteStock": 31,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-07-14T12:00:00",
+      "categorie": {
+        "id": 10,
+        "nom": "Snacks",
+        "description": "Chips, biscuits apéritifs et chocolats"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 30,
+    "motif": "Réassort",
+    "dateMouvement": "2026-07-26T12:00:00"
+  },
+  {
+    "id": 122,
+    "produit": {
+      "id": 59,
+      "nom": "Bonbons gélifiés",
+      "description": "Sachet 250g",
+      "prixAchat": 800,
+      "prixVente": 1200,
+      "quantiteStock": 31,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-07-14T12:00:00",
+      "categorie": {
+        "id": 10,
+        "nom": "Snacks",
+        "description": "Chips, biscuits apéritifs et chocolats"
+      },
+      "stockFaible": false
+    },
+    "type": "SORTIE",
+    "quantite": 21,
+    "motif": "Vente client",
+    "dateMouvement": "2026-07-26T15:15:00"
+  },
+  {
+    "id": 123,
+    "produit": {
+      "id": 1,
+      "nom": "Eau minerale 1.5L",
+      "description": "Bouteille d'eau",
+      "prixAchat": 300,
+      "prixVente": 500,
+      "quantiteStock": 60,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-06-26T08:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 30,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 124,
+    "produit": {
+      "id": 2,
+      "nom": "Soda 33cl",
+      "description": "Boisson gazeuse cola",
+      "prixAchat": 400,
+      "prixVente": 700,
+      "quantiteStock": 35,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-06-27T09:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 20,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 125,
+    "produit": {
+      "id": 3,
+      "nom": "Jus d'orange 1L",
+      "description": "Jus pur jus",
+      "prixAchat": 900,
+      "prixVente": 1300,
+      "quantiteStock": 30,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-06-28T10:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 15,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 126,
+    "produit": {
+      "id": 4,
+      "nom": "Boisson energetique",
+      "description": "Cannette 250ml",
+      "prixAchat": 600,
+      "prixVente": 1000,
+      "quantiteStock": 15,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-06-29T11:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 10,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 127,
+    "produit": {
+      "id": 5,
+      "nom": "Thé glacé 1.5L",
+      "description": "Goût pêche",
+      "prixAchat": 700,
+      "prixVente": 1100,
+      "quantiteStock": 32,
+      "seuilAlerte": 8,
+      "dateAjout": "2026-06-30T12:00:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 12,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 128,
+    "produit": {
+      "id": 6,
+      "nom": "Sirop de menthe",
+      "description": "Bouteille 75cl",
+      "prixAchat": 1200,
+      "prixVente": 1600,
+      "quantiteStock": 22,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-01T08:30:00",
+      "categorie": {
+        "id": 1,
+        "nom": "Boissons",
+        "description": "Boissons diverses (eau, soda, jus)"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 10,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 129,
+    "produit": {
+      "id": 7,
+      "nom": "Riz 5kg",
+      "description": "Sac de riz local",
+      "prixAchat": 8000,
+      "prixVente": 10000,
+      "quantiteStock": 33,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-06-26T10:30:00",
+      "categorie": {
+        "id": 2,
+        "nom": "Epicerie",
+        "description": "Produits alimentaires secs et pâtes"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 15,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 130,
+    "produit": {
+      "id": 8,
+      "nom": "Pâtes 500g",
+      "description": "Coquillettes",
+      "prixAchat": 450,
+      "prixVente": 700,
+      "quantiteStock": 70,
+      "seuilAlerte": 15,
+      "dateAjout": "2026-06-27T14:00:00",
+      "categorie": {
+        "id": 2,
+        "nom": "Epicerie",
+        "description": "Produits alimentaires secs et pâtes"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 25,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 131,
+    "produit": {
+      "id": 9,
+      "nom": "Huile de tournesol 1L",
+      "description": "Bouteille d'huile",
+      "prixAchat": 1500,
+      "prixVente": 1900,
+      "quantiteStock": 35,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-06-28T15:00:00",
+      "categorie": {
+        "id": 2,
+        "nom": "Epicerie",
+        "description": "Produits alimentaires secs et pâtes"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 15,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 132,
+    "produit": {
+      "id": 10,
+      "nom": "Sucre en poudre 1kg",
+      "description": "Sucre blanc",
+      "prixAchat": 900,
+      "prixVente": 1200,
+      "quantiteStock": 48,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-06-29T16:00:00",
+      "categorie": {
+        "id": 2,
+        "nom": "Epicerie",
+        "description": "Produits alimentaires secs et pâtes"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 20,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 133,
+    "produit": {
+      "id": 11,
+      "nom": "Sel fin 1kg",
+      "description": "Sachet de sel",
+      "prixAchat": 250,
+      "prixVente": 400,
+      "quantiteStock": 40,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-06-30T09:00:00",
+      "categorie": {
+        "id": 2,
+        "nom": "Epicerie",
+        "description": "Produits alimentaires secs et pâtes"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 10,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 134,
+    "produit": {
+      "id": 12,
+      "nom": "Farine de blé 1kg",
+      "description": "Farine type 55",
+      "prixAchat": 800,
+      "prixVente": 1100,
+      "quantiteStock": 39,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-07-01T10:00:00",
+      "categorie": {
+        "id": 2,
+        "nom": "Epicerie",
+        "description": "Produits alimentaires secs et pâtes"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 12,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 135,
+    "produit": {
+      "id": 13,
+      "nom": "Savon de toilette",
+      "description": "Savon 100g",
+      "prixAchat": 500,
+      "prixVente": 800,
+      "quantiteStock": 13,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-02T14:15:00",
+      "categorie": {
+        "id": 3,
+        "nom": "Hygiene",
+        "description": "Produits d'hygiene et de soin corporel"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 10,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 136,
+    "produit": {
+      "id": 14,
+      "nom": "Dentifrice 75ml",
+      "description": "Menthe fraîche",
+      "prixAchat": 800,
+      "prixVente": 1200,
+      "quantiteStock": 25,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-03T11:00:00",
+      "categorie": {
+        "id": 3,
+        "nom": "Hygiene",
+        "description": "Produits d'hygiene et de soin corporel"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 12,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 137,
+    "produit": {
+      "id": 15,
+      "nom": "Gel douche 250ml",
+      "description": "Parfum vanille",
+      "prixAchat": 1200,
+      "prixVente": 1700,
+      "quantiteStock": 19,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-04T13:00:00",
+      "categorie": {
+        "id": 3,
+        "nom": "Hygiene",
+        "description": "Produits d'hygiene et de soin corporel"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 10,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 138,
+    "produit": {
+      "id": 16,
+      "nom": "Shampooing 400ml",
+      "description": "Cheveux normaux",
+      "prixAchat": 1800,
+      "prixVente": 2400,
+      "quantiteStock": 22,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-05T15:00:00",
+      "categorie": {
+        "id": 3,
+        "nom": "Hygiene",
+        "description": "Produits d'hygiene et de soin corporel"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 8,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 139,
+    "produit": {
+      "id": 17,
+      "nom": "Papier toilette (x6)",
+      "description": "Paquet de 6 rouleaux",
+      "prixAchat": 2000,
+      "prixVente": 2800,
+      "quantiteStock": 45,
+      "seuilAlerte": 8,
+      "dateAjout": "2026-07-06T08:00:00",
+      "categorie": {
+        "id": 3,
+        "nom": "Hygiene",
+        "description": "Produits d'hygiene et de soin corporel"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 15,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 140,
+    "produit": {
+      "id": 18,
+      "nom": "Déodorant spray",
+      "description": "Fraîcheur intense",
+      "prixAchat": 1500,
+      "prixVente": 2200,
+      "quantiteStock": 18,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-07T09:30:00",
+      "categorie": {
+        "id": 3,
+        "nom": "Hygiene",
+        "description": "Produits d'hygiene et de soin corporel"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 10,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 141,
+    "produit": {
+      "id": 19,
+      "nom": "Lait demi-ecreme 1L",
+      "description": "Brique de lait",
+      "prixAchat": 700,
+      "prixVente": 950,
+      "quantiteStock": 25,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-08T07:45:00",
+      "categorie": {
+        "id": 4,
+        "nom": "Frais",
+        "description": "Produits laitiers, œufs et frais"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 10,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 142,
+    "produit": {
+      "id": 20,
+      "nom": "Yaourt nature (x4)",
+      "description": "Pack de 4",
+      "prixAchat": 1200,
+      "prixVente": 1600,
+      "quantiteStock": 18,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-09T11:20:00",
+      "categorie": {
+        "id": 4,
+        "nom": "Frais",
+        "description": "Produits laitiers, œufs et frais"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 10,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 143,
+    "produit": {
+      "id": 21,
+      "nom": "Beurre doux 250g",
+      "description": "Plaquette de beurre",
+      "prixAchat": 1400,
+      "prixVente": 1900,
+      "quantiteStock": 23,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-10T10:00:00",
+      "categorie": {
+        "id": 4,
+        "nom": "Frais",
+        "description": "Produits laitiers, œufs et frais"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 10,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 144,
+    "produit": {
+      "id": 22,
+      "nom": "Fromage râpé 200g",
+      "description": "Emmental râpé",
+      "prixAchat": 1600,
+      "prixVente": 2200,
+      "quantiteStock": 20,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-11T12:00:00",
+      "categorie": {
+        "id": 4,
+        "nom": "Frais",
+        "description": "Produits laitiers, œufs et frais"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 10,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 145,
+    "produit": {
+      "id": 23,
+      "nom": "Œufs x6",
+      "description": "Boîte de 6 œufs frais",
+      "prixAchat": 900,
+      "prixVente": 1200,
+      "quantiteStock": 53,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-07-12T14:00:00",
+      "categorie": {
+        "id": 4,
+        "nom": "Frais",
+        "description": "Produits laitiers, œufs et frais"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 15,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 146,
+    "produit": {
+      "id": 24,
+      "nom": "Crème fraîche 20cl",
+      "description": "Pot de crème",
+      "prixAchat": 1000,
+      "prixVente": 1400,
+      "quantiteStock": 20,
+      "seuilAlerte": 4,
+      "dateAjout": "2026-07-13T16:00:00",
+      "categorie": {
+        "id": 4,
+        "nom": "Frais",
+        "description": "Produits laitiers, œufs et frais"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 10,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 147,
+    "produit": {
+      "id": 25,
+      "nom": "Lessive en poudre 1kg",
+      "description": "Poudre lave-linge",
+      "prixAchat": 2500,
+      "prixVente": 3200,
+      "quantiteStock": 27,
+      "seuilAlerte": 3,
+      "dateAjout": "2026-07-14T16:00:00",
+      "categorie": {
+        "id": 5,
+        "nom": "Entretien",
+        "description": "Produits de nettoyage et maison"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 15,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 148,
+    "produit": {
+      "id": 26,
+      "nom": "Liquide vaisselle 500ml",
+      "description": "Senteur citron",
+      "prixAchat": 900,
+      "prixVente": 1300,
+      "quantiteStock": 30,
+      "seuilAlerte": 6,
+      "dateAjout": "2026-07-15T09:00:00",
+      "categorie": {
+        "id": 5,
+        "nom": "Entretien",
+        "description": "Produits de nettoyage et maison"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 15,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 149,
+    "produit": {
+      "id": 27,
+      "nom": "Éponges (x3)",
+      "description": "Lot de 3 éponges",
+      "prixAchat": 400,
+      "prixVente": 700,
+      "quantiteStock": 45,
+      "seuilAlerte": 10,
+      "dateAjout": "2026-07-16T10:00:00",
+      "categorie": {
+        "id": 5,
+        "nom": "Entretien",
+        "description": "Produits de nettoyage et maison"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 20,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  },
+  {
+    "id": 150,
+    "produit": {
+      "id": 60,
+      "nom": "Barres céréales (x6)",
+      "description": "Chocolat / amande",
+      "prixAchat": 1500,
+      "prixVente": 2100,
+      "quantiteStock": 30,
+      "seuilAlerte": 5,
+      "dateAjout": "2026-07-26T12:52:52.644973",
+      "categorie": {
+        "id": 10,
+        "nom": "Snacks",
+        "description": "Chips, biscuits apéritifs et chocolats"
+      },
+      "stockFaible": false
+    },
+    "type": "ENTREE",
+    "quantite": 20,
+    "motif": "Dernier réassort",
+    "dateMouvement": "2026-07-26T12:52:52.678964"
+  }
+]

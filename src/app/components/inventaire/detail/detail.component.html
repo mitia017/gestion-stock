@@ -1,0 +1,122 @@
+<div class="w-full max-w-4xl mx-auto mt-6 px-4 space-y-6" *ngIf="produit; else chargement">
+
+  <div class="flex items-center justify-between bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+    <div class="flex items-center gap-3">
+      <a routerLink="/inventaire" class="text-sm font-semibold text-gray-500 hover:text-blue-600 transition-colors flex items-center gap-1">
+        &larr; Retour à l'inventaire
+      </a>
+    </div>
+    <div class="flex gap-2">
+      <a [routerLink]="['/inventaire', 'edit', produit.id]"
+         class="px-4 py-2 text-sm font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors cursor-pointer">
+        Modifier l'article
+      </a>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 space-y-6">
+    <div class="flex flex-wrap items-start justify-between gap-4 border-b border-gray-100 pb-4">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-mono font-bold text-gray-400 uppercase bg-gray-100 px-2 py-0.5 rounded">#{{ produit.id }}</span>
+          <span class="text-xs font-bold text-gray-500 uppercase bg-blue-50 text-blue-600 px-2 py-0.5 rounded">{{ produit.categorie.nom }}</span>
+        </div>
+        <h2 class="text-2xl font-bold text-gray-900 mt-1">{{ produit.nom }}</h2>
+        <p class="text-sm text-gray-500 mt-1 italic">{{ produit.description }}</p>
+      </div>
+
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold"
+            [ngClass]="{'bg-green-100 text-green-700': !produit.stockFaible, 'bg-red-100 text-red-700 animate-pulse': produit.stockFaible}">
+        ● {{ produit.stockFaible ? 'Alerte : Stock Critique' : 'Stock Normal' }}
+      </span>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+
+      <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+        <span class="block text-xs font-semibold uppercase text-gray-400">Quantité Disponible</span>
+        <span class="block text-2xl font-black text-gray-800 mt-1">{{ produit.quantiteStock }} <span class="text-xs font-normal text-gray-400">unités</span></span>
+      </div>
+
+      <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+        <span class="block text-xs font-semibold uppercase text-gray-400">Seuil de Réappro.</span>
+        <span class="block text-2xl font-black text-gray-800 mt-1">{{ produit.seuilAlerte }} <span class="text-xs font-normal text-gray-400">unités</span></span>
+      </div>
+
+      <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+        <span class="block text-xs font-semibold uppercase text-gray-400">Prix de Vente Unit.</span>
+        <span class="block text-2xl font-black text-gray-800 mt-1">{{ produit.prixVente | currency:'EUR':'symbol':'1.2-2' }}</span>
+      </div>
+
+      <div class="p-4 bg-blue-50/50 rounded-xl border border-blue-100/50">
+        <span class="block text-xs font-semibold uppercase text-blue-500">Valeur Active du Stock</span>
+        <span class="block text-2xl font-black text-blue-700 mt-1">{{ produit.quantiteStock * produit.prixVente | currency:'EUR':'symbol':'1.2-2' }}</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+
+    <div class="px-6 py-4 bg-gray-50 border-b border-gray-100">
+      <h3 class="text-sm font-bold text-gray-800 uppercase tracking-wider">Journal des flux logistiques de l'article</h3>
+      <p class="text-xs text-gray-500 mt-0.5">Historique des entrées et sorties ayant impacté ce produit</p>
+    </div>
+
+    <div class="overflow-x-auto">
+      <table class="w-full text-left border-collapse text-sm">
+        <thead class="bg-gray-50/50 text-gray-400 font-semibold text-xs uppercase border-b border-gray-100">
+        <tr>
+          <th class="py-3 px-6 w-48">Date & Heure</th>
+          <th class="py-3 px-6 text-center w-36">Type</th>
+          <th class="py-3 px-6 w-32">ID Mouvement</th>
+          <th class="py-3 px-6">Description / Motif du mouvement</th>
+          <th class="py-3 px-6 text-center w-32">Quantité</th>
+        </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100 text-gray-700 font-medium">
+        @for (m of historiqueMouvements; track m.id) {
+        <tr class="hover:bg-gray-50/40 transition-colors">
+
+          <td class="py-3 px-6 text-gray-500 text-xs font-mono">
+            {{ m.dateMouvement | date:'dd/MM/yyyy HH:mm:ss' }}
+          </td>
+
+          <td class="py-3 px-6 text-center">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold"
+                      [ngClass]="{'text-emerald-700 bg-emerald-50': m.type === 'ENTREE', 'text-orange-700 bg-orange-50': m.type === 'SORTIE'}">
+                  {{ m.type === 'ENTREE' ? '➔ Entrée' : '➔ Sortie' }}
+                </span>
+          </td>
+
+          <td class="py-3 px-6 font-mono text-sm text-gray-400">#{{ m.id }}</td>
+
+          <td class="py-3 px-6 text-gray-600 font-normal italic text-xs truncate max-w-[250px]" title="{{ m.motif }}">
+            {{ m.motif }}
+          </td>
+
+          <td class="py-3 px-6 text-center font-bold text-base"
+              [ngClass]="{'text-emerald-600': m.type === 'ENTREE', 'text-orange-600': m.type === 'SORTIE'}">
+            {{ m.type === 'ENTREE' ? '+' : '-' }}{{ m.quantite }}
+          </td>
+
+        </tr>
+        } @empty {
+        <tr>
+          <td colspan="5" class="text-center py-12 text-gray-400 bg-white font-normal italic text-xs">
+            Aucun mouvement de stock (Entrée ou Sortie) n'a encore été enregistré pour cet article.
+          </td>
+        </tr>
+        }
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<ng-template #chargement>
+  <div class="text-center py-24 text-gray-400 font-medium text-sm animate-pulse">
+    Chargement de la fiche produit en cours...
+  </div>
+</ng-template>

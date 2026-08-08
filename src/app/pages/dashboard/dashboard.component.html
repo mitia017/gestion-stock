@@ -1,0 +1,24 @@
+
+<app-kpi
+  [totalProduits]="totalProduits"
+  [totalEntrees]="totalEntrees"
+  [totalSorties]="totalSorties"
+  [prixTotalProduits]="prixTotalProduits">
+</app-kpi>
+
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start w-full">
+
+  <div class="lg:col-span-2">
+
+    <app-chart></app-chart>
+
+  </div>
+
+  <div class="lg:col-span-1">
+
+    <app-alertes-stock></app-alertes-stock>
+
+  </div>
+
+</div>

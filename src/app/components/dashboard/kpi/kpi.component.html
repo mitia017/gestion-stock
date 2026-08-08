@@ -1,0 +1,50 @@
+<div class="p-3 text-slate-800">
+  <h1 class="text-5xl font-bold p-6">Tableau de bord - Vue d'ensemble</h1>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6 w-full">
+
+  <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between">
+    <div>
+      <p class="text-sm font-medium text-slate-400">Total Produits</p>
+      <p class="text-2xl font-bold text-slate-800 mt-1">{{ totalProduits | number }}</p>
+      <span class="text-xs text-slate-400">Articles en stock actuel</span>
+    </div>
+    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
+      <fa-icon [icon]="faBoxes" class="text-lg"></fa-icon>
+    </div>
+  </div>
+
+  <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between">
+    <div>
+      <p class="text-sm font-medium text-slate-400">Total Entrées</p>
+      <p class="text-2xl font-bold text-slate-800 mt-1">{{ totalEntrees | number }}</p>
+      <span class="text-xs text-green-500 font-medium">Flux entrant cumulé</span>
+    </div>
+    <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center text-green-600">
+      <fa-icon [icon]="faEntree" class="text-lg"></fa-icon>
+    </div>
+  </div>
+
+  <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between">
+    <div>
+      <p class="text-sm font-medium text-slate-400">Total Sorties</p>
+      <p class="text-2xl font-bold text-slate-800 mt-1">{{ totalSorties | number }}</p>
+      <span class="text-xs text-red-500 font-medium">Flux sortant cumulé</span>
+    </div>
+    <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-red-600">
+      <fa-icon [icon]="faSortie" class="text-lg"></fa-icon>
+    </div>
+  </div>
+
+  <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between">
+    <div>
+      <p class="text-sm font-medium text-slate-400">Valeur Totale Stock</p>
+      <p class="text-2xl font-bold text-slate-800 mt-1">{{ prixTotalProduits | currency:'EUR':'symbol':'1.0-2' }}</p>
+      <span class="text-xs text-slate-400">Estimation financière</span>
+    </div>
+    <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center text-amber-600">
+      <fa-icon [icon]="faEuro" class="text-lg"></fa-icon>
+    </div>
+  </div>
+
+</div>
